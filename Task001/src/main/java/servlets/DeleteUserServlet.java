@@ -2,6 +2,7 @@ package servlets;
 
 import model.User;
 import service.UserService;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,10 +13,38 @@ import java.io.IOException;
 
 @WebServlet("/users/delete")
 public class DeleteUserServlet extends HttpServlet {
+    private UserService userService = UserService.getInstance();
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String id = req.getParameter("id");
+        User doDeleteUser = null;
+
+        try {
+            doDeleteUser = userService.getUserById(Long.parseLong(id));
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        }
+
+        if (doDeleteUser != null) {
+            req.setAttribute("id", doDeleteUser.getId());
+            req.setAttribute("login", doDeleteUser.getLogin());
+
+            resp.setStatus(200);
+            RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/deleteUser.jsp");
+            requestDispatcher.forward(req, resp);
+        } else {
+            req.getSession().setAttribute("resultMessage", "Операция удаления пользователя прошла не успешно!");
+            resp.sendRedirect("/resultPage.jsp");
+        }
+
+    }
+
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setCharacterEncoding("UTF-8");
         boolean result = false;
-        UserService userService = UserService.getInstance();
         Long id = Long.parseLong(req.getParameter("id"));
         User doDeleteUser = userService.getUserById(id);
         if (doDeleteUser != null) {
@@ -24,10 +53,8 @@ public class DeleteUserServlet extends HttpServlet {
         String resultMessage = result ?
                 "Пользователь " + doDeleteUser.getLogin() + " успешно удален!" :
                 "Операция удаления пользователя прошла не успешно!";
-        resp.setStatus(result ? 202 : 406);
-        req.setAttribute("resultMessage", resultMessage);
-        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/resultPage.jsp");
-        requestDispatcher.forward(req, resp);
+        req.getSession().setAttribute("resultMessage", resultMessage);
+        resp.sendRedirect("/resultPage.jsp");
     }
 
 }

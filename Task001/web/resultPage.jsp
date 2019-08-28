@@ -1,6 +1,5 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%request.setCharacterEncoding("UTF-8");%>
 <html>
 <head>
     <title>Результат</title>
@@ -8,7 +7,7 @@
 <body>
 
 <hr>
-<p align="center">${requestScope.resultMessage}</p>
+<p align="center">${sessionScope.resultMessage}</p>
 <hr>
 
 <center>

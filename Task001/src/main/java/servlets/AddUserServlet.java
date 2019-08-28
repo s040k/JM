@@ -13,7 +13,14 @@ import java.io.IOException;
 @WebServlet("/users/add")
 public class AddUserServlet extends HttpServlet {
     @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/addUser.jsp");
+        requestDispatcher.forward(req, resp);
+    }
+
+    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setCharacterEncoding("UTF-8");
         boolean result;
         UserService userService = UserService.getInstance();
         User doAddUser = new User();
@@ -26,8 +33,7 @@ public class AddUserServlet extends HttpServlet {
                 "Пользователь " + doAddUser.getLogin() + " успешно добавлен!" :
                 "Пользователь " + doAddUser.getLogin() + " не может быть добавлен в базу!";
         resp.setStatus(result ? 202 : 406);
-        req.setAttribute("resultMessage", resultMessage);
-        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/resultPage.jsp");
-        requestDispatcher.forward(req, resp);
+        req.getSession().setAttribute("resultMessage",resultMessage);
+        resp.sendRedirect("/resultPage.jsp");
     }
 }

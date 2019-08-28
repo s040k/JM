@@ -1,10 +1,9 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%request.setCharacterEncoding("UTF-8");%>
 <html>
 <head>
-    <title>Title</title>
+    <title>Изменяем данные пользователя</title>
 </head>
 <body>
 <hr>
@@ -12,10 +11,10 @@
 <hr/>
 <center>
 <form action="/users/update" method="post">
-    <input type="hidden" name="id" value="${param.id}"/>
-        Name:<input type="text" name="name" value="${param.name}"/>
-        Login:<input type="text" name="login" value="${param.login}"/>
-        Password:<input type="text" name="password" value="${param.password}"/>
+    <input type="hidden" name="id" value="${requestScope.id}"/>
+        Name:<input type="text" name="name" value="${requestScope.name}"/>
+        Login:<input type="text" name="login" value="${requestScope.login}"/>
+        Password:<input type="text" name="password" value="${requestScope.password}"/>
         <br>
         <br>
         <input type="submit" value="Изменить"/>

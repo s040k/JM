@@ -7,7 +7,7 @@
 <body>
 
 <hr>
-<p align="center">${requestScope.resultMessage}</p>
+<p align="center">${sessionScope.resultMessage}</p>
 <hr>
 
 <center>
