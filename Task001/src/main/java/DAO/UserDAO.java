@@ -2,13 +2,14 @@ package DAO;
 
 import models.User;
 import org.hibernate.Criteria;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
 
-public class UserDAO implements Dao<User,Long> {
+public class UserDAO implements Dao<User, Long> {
     private Session session;
     private static UserDAO userDAO;
 
@@ -44,6 +45,7 @@ public class UserDAO implements Dao<User,Long> {
             session.close();
         }
     }
+
     @Override
     public void create(User user) {
         Transaction transaction = session.beginTransaction();
@@ -58,11 +60,12 @@ public class UserDAO implements Dao<User,Long> {
         }
     }
 
-
-    public void delete(User user) {
+    public void delete(Long id) {
         Transaction transaction = session.beginTransaction();
-        session.delete(user);
         try {
+            Query query = session.createQuery("delete from User where id = :idValue");
+            query.setLong("idValue", id);
+            query.executeUpdate();
             transaction.commit();
         } catch (Exception e) {
             e.printStackTrace();

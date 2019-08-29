@@ -46,12 +46,9 @@ public class DeleteUserServlet extends HttpServlet {
         req.setCharacterEncoding("UTF-8");
         boolean result = false;
         Long id = Long.parseLong(req.getParameter("id"));
-        User doDeleteUser = userService.getUserById(id);
-        if (doDeleteUser != null) {
-            result = userService.deleteUser(doDeleteUser);
-        }
+        result = userService.deleteUser(id);
         String resultMessage = result ?
-                "Пользователь " + doDeleteUser.getLogin() + " успешно удален!" :
+                "Пользователь успешно удален!" :
                 "Операция удаления пользователя прошла не успешно!";
         req.getSession().setAttribute("resultMessage", resultMessage);
         resp.sendRedirect("/resultPage.jsp");

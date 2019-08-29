@@ -42,9 +42,9 @@ public class UserService {
         return false;
     }
 
-    public boolean deleteUser(User user) {
-        getUserDao().delete(user);
-        return !getUserDao().validate(user);
+    public boolean deleteUser(Long id) {
+        getUserDao().delete(id);
+        return getUserDao().getById(id)==null;
     }
 
     public User getUserById(Long id) {
