@@ -1,6 +1,6 @@
 package DAO;
 
-import model.User;
+import models.User;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -8,7 +8,7 @@ import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
 
-public class UserDAO {
+public class UserDAO implements Dao<User,Long> {
     private Session session;
     private static UserDAO userDAO;
 
@@ -32,20 +32,6 @@ public class UserDAO {
         return result;
     }
 
-    public void add(User user) {
-
-        Transaction transaction = session.beginTransaction();
-        session.save(user);
-        try {
-            transaction.commit();
-        } catch (Exception e) {
-            e.printStackTrace();
-            transaction.rollback();
-        } finally {
-            session.close();
-        }
-    }
-
     public void update(User user) {
         Transaction transaction = session.beginTransaction();
         session.update(user);
@@ -58,6 +44,20 @@ public class UserDAO {
             session.close();
         }
     }
+    @Override
+    public void create(User user) {
+        Transaction transaction = session.beginTransaction();
+        session.save(user);
+        try {
+            transaction.commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+            transaction.rollback();
+        } finally {
+            session.close();
+        }
+    }
+
 
     public void delete(User user) {
         Transaction transaction = session.beginTransaction();

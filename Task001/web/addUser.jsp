@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Добавляем нового пользователя</title>
+    <title>Добавляем нового  пользователя</title>
 </head>
 <body>
 

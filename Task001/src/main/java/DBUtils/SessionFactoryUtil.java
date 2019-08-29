@@ -1,7 +1,7 @@
-package DBUtil;
+package DBUtils;
 
 
-import model.User;
+import models.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;

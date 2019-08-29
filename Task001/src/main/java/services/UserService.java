@@ -1,8 +1,8 @@
-package service;
+package services;
 
 import DAO.UserDAO;
-import DBUtil.SessionFactoryUtil;
-import model.User;
+import DBUtils.SessionFactoryUtil;
+import models.User;
 
 import java.util.List;
 
@@ -25,7 +25,7 @@ public class UserService {
     public boolean addUser(User user) {
         if (!user.getName().isEmpty() & !user.getLogin().isEmpty() & !user.getPassword().isEmpty()) {
             if (getUserDao().getByLogin(user.getLogin()) == null) {
-                getUserDao().add(user);
+                getUserDao().create(user);
                 return getUserDao().validate(user);
             }
         }

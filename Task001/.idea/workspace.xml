@@ -6,7 +6,35 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a724dca-72a6-4caf-a319-bbbe74008364" name="Default Changelist" comment="" />
+    <list default="true" id="1a724dca-72a6-4caf-a319-bbbe74008364" name="Default Changelist" comment="Первые правки, после учета критики Никиты">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/DAO/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/DAO/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/DBUtil/SessionFactoryUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/model/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/servlets/AddUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/servlets/AddUserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/servlets/DeleteUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/servlets/DeleteUserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/servlets/UpdateUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/servlets/UpdateUserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/servlets/ViewAllUsersServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/servlets/ViewAllUsersServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DBUtil/SessionFactoryUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DBUtils/SessionFactoryUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/AddUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/AddUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/DeleteUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/DeleteUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/UpdateUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/UpdateUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/ViewAllUsersServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/ViewAllUsersServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DBUtil/SessionFactoryUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servlets/AddUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlets/AddUserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servlets/DeleteUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlets/DeleteUserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servlets/UpdateUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlets/UpdateUserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servlets/ViewAllUsersServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlets/ViewAllUsersServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/addUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/addUser.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resultPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/resultPage.jsp" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +60,7 @@
       <list>
         <option value="Class" />
         <option value="Jsp File" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -278,7 +307,8 @@
       <workItem from="1566902002463" duration="27412000" />
       <workItem from="1566938365714" duration="2068000" />
       <workItem from="1566996517658" duration="11497000" />
-      <workItem from="1567028281943" duration="518000" />
+      <workItem from="1567028281943" duration="1442000" />
+      <workItem from="1567075180501" duration="2130000" />
     </task>
     <task id="LOCAL-00001" summary="test 0:46">
       <created>1567028796494</created>
@@ -287,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567028796494</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="test 0:46">
+      <created>1567028826453</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1567028826453</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,7 +335,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -306,6 +345,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test 0:46" />
-    <option name="LAST_COMMIT_MESSAGE" value="test 0:46" />
+    <MESSAGE value="Первые правки, после учета критики Никиты" />
+    <option name="LAST_COMMIT_MESSAGE" value="Первые правки, после учета критики Никиты" />
   </component>
 </project>
