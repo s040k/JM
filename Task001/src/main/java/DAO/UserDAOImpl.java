@@ -1,24 +1,22 @@
 package DAO;
 
-import models.User;
-import org.hibernate.Criteria;
+import model.User;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
 
-public class UserDAO implements Dao<User, Long> {
+public class UserDAOImpl implements UserDao<User, Long, String> {
     private Session session;
-    private static UserDAO userDAO;
+    private static UserDAOImpl userDAO;
 
-    private UserDAO() {
+    private UserDAOImpl() {
     }
 
-    public static UserDAO getInstance(Session session) {
+    public static UserDAOImpl getInstance(Session session) {
         if (userDAO == null) {
-            userDAO = new UserDAO();
+            userDAO = new UserDAOImpl();
         }
         userDAO.session = session;
         return userDAO;
@@ -26,8 +24,8 @@ public class UserDAO implements Dao<User, Long> {
 
     public List<User> getAll() {
         List<User> result = null;
-        Criteria criteria = session.createCriteria(User.class);
-        result = criteria.list();
+        Query query = session.createQuery("from User");
+        result = query.list();
         session.close();
 
         return result;
@@ -77,29 +75,37 @@ public class UserDAO implements Dao<User, Long> {
 
     public boolean validate(User user) {
         boolean result = false;
-        Criteria criteria = session.createCriteria(User.class);
-        criteria.add(Restrictions.eq("name", user.getName()));
-        criteria.add(Restrictions.eq("login", user.getLogin()));
-        criteria.add(Restrictions.eq("password", user.getPassword()));
-        result = !criteria.list().isEmpty();
+        Query query = session.createQuery("from User where " +
+                "name = :nameVal and " +
+                "login = :loginVal and " +
+                "password = :passwordVal"
+        );
+
+        query.setString("nameVal", user.getName());
+        query.setString("loginVal", user.getLogin());
+        query.setString("passwordVal", user.getPassword());
+        result = !query.list().isEmpty();
+
         session.close();
         return result;
     }
 
     public User getById(Long id) {
         User result = null;
-        Criteria criteria = session.createCriteria(User.class);
-        criteria.add(Restrictions.eq("id", id));
-        result = (User) criteria.uniqueResult();
+        Query query = session.createQuery("from User where id = :idVal");
+        query.setLong("idVal", id);
+        result = (User) query.uniqueResult();
+
         session.close();
         return result;
     }
 
     public User getByLogin(String login) {
         User result = null;
-        Criteria criteria = session.createCriteria(User.class);
-        criteria.add(Restrictions.eq("login", login));
-        result = (User) criteria.uniqueResult();
+        Query query = session.createQuery("from User where login = :loginVal");
+        query.setString("loginVal", login);
+        result = (User) query.uniqueResult();
+
         session.close();
         return result;
     }

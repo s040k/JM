@@ -1,7 +1,7 @@
-package servlets;
+package servlet;
 
-import models.User;
-import services.UserService;
+import model.User;
+import service.UserService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

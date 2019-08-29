@@ -1,8 +1,11 @@
-package services;
+package service;
 
-import DAO.UserDAO;
-import DBUtils.SessionFactoryUtil;
-import models.User;
+import DAO.UserDAOImpl;
+import DAO.UserDAOJdbc;
+import DAO.UserDao;
+import dbUtil.ConnectionFactoryUtil;
+import dbUtil.SessionFactoryUtil;
+import model.User;
 
 import java.util.List;
 
@@ -26,6 +29,7 @@ public class UserService {
         if (!user.getName().isEmpty() & !user.getLogin().isEmpty() & !user.getPassword().isEmpty()) {
             if (getUserDao().getByLogin(user.getLogin()) == null) {
                 getUserDao().create(user);
+                System.out.println(getUserDao().validate(user));
                 return getUserDao().validate(user);
             }
         }
@@ -51,7 +55,9 @@ public class UserService {
         return getUserDao().getById(id);
     }
 
-    private UserDAO getUserDao() {
-        return UserDAO.getInstance(SessionFactoryUtil.getInstance().openSession());
+
+    private UserDao<User,Long,String> getUserDao() {
+        return UserDAOJdbc.getInstance(ConnectionFactoryUtil.getInstance().getSqlConnetcion());
+       // return UserDAOImpl.getInstance(SessionFactoryUtil.getInstance().openSession());
     }
 }
