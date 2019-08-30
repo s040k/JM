@@ -1,9 +1,15 @@
 package DAO;
 
+import dbUtil.DBHelper;
 import model.User;
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.service.ServiceRegistry;
+
 import java.util.List;
 
 public class UserDaoHibernateImpl implements UserDao<User, Long, String> {
@@ -13,11 +19,11 @@ public class UserDaoHibernateImpl implements UserDao<User, Long, String> {
     private UserDaoHibernateImpl() {
     }
 
-    public static UserDaoHibernateImpl getInstance(Session session) {
+    public static UserDaoHibernateImpl getInstance(Configuration configuration) {
         if (userDAO == null) {
             userDAO = new UserDaoHibernateImpl();
         }
-        userDAO.session = session;
+        userDAO.session = createSessionFactory(configuration).openSession();
         return userDAO;
     }
 
@@ -109,5 +115,12 @@ public class UserDaoHibernateImpl implements UserDao<User, Long, String> {
         return result;
     }
 
+    private static SessionFactory createSessionFactory(Configuration configuration) {
+        StandardServiceRegistryBuilder registryBuilder = new StandardServiceRegistryBuilder();
+        registryBuilder.applySettings(configuration.getProperties());
+        ServiceRegistry serviceRegistry = registryBuilder.build();
+
+        return configuration.buildSessionFactory(serviceRegistry);
+    }
 
 }

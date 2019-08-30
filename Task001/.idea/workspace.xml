@@ -7,14 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a724dca-72a6-4caf-a319-bbbe74008364" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dbUtil/DBHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/factory/UserDaoFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/resources/test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/factory/DaoFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/factory/DaoHibernateFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/factory/DaoJdbcFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDaoHibernateImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/UserDAOJdbc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDaoJDBCimpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dbUtil/ConnectionFactoryUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dbUtil/SessionFactoryUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/UserDaoHibernateImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDaoHibernateImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/factory/UserDaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factory/UserDaoFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resources/test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/test.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserService.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -296,7 +295,7 @@
       <workItem from="1567075180501" duration="4534000" />
       <workItem from="1567084548101" duration="504000" />
       <workItem from="1567085233305" duration="10828000" />
-      <workItem from="1567152161498" duration="9427000" />
+      <workItem from="1567152161498" duration="11386000" />
     </task>
     <task id="LOCAL-00001" summary="test 0:46">
       <created>1567028796494</created>
@@ -333,7 +332,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567095348477</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Первые правки 3-е задание 30,08">
+      <created>1567172645438</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1567172645439</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,6 +365,7 @@
     <MESSAGE value="test 0:46" />
     <MESSAGE value="Первые правки, после учета критики Никиты" />
     <MESSAGE value="Третьи правки 29,08" />
-    <option name="LAST_COMMIT_MESSAGE" value="Третьи правки 29,08" />
+    <MESSAGE value="Первые правки 3-е задание 30,08" />
+    <option name="LAST_COMMIT_MESSAGE" value="Первые правки 3-е задание 30,08" />
   </component>
 </project>

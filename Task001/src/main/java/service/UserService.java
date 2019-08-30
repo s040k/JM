@@ -1,6 +1,7 @@
 package service;
 
 import DAO.UserDao;
+import factory.DaoFactory;
 import factory.UserDaoFactory;
 import model.User;
 
@@ -54,6 +55,8 @@ public class UserService {
 
 
     private UserDao<User,Long,String> getUserDao() {
-        return UserDaoFactory.createDao("H:\\JM\\GitProject\\Task001\\src\\main\\java\\resources\\test.properties");
+        String path = "H:\\JM\\GitProject\\Task001\\src\\main\\java\\resources\\test.properties";
+        DaoFactory daoFactory = UserDaoFactory.getDaoFactoryByProperty(path);
+        return daoFactory.createDao();
     }
 }
