@@ -1,31 +1,31 @@
 package dbUtil;
 
+import model.User;
+import org.hibernate.cfg.Configuration;
+
 import java.sql.Connection;
 import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.TimeZone;
 
-public class ConnectionFactoryUtil {
-    private static ConnectionFactoryUtil connectionFactoryUtil;
+public class DBHelper {
+    private static DBHelper dbHelper;
 
-    private ConnectionFactoryUtil() {
+    private DBHelper() {
     }
 
-    public static ConnectionFactoryUtil getInstance(){
-        if(connectionFactoryUtil==null){
-            connectionFactoryUtil = new ConnectionFactoryUtil();
+    public static DBHelper getInstance() {
+        if (dbHelper == null) {
+            dbHelper = new DBHelper();
         }
-        return connectionFactoryUtil;
+        return dbHelper;
     }
 
-    public Connection getSqlConnetcion() {
+    public Connection getConnection() {
         try {
             DriverManager.registerDriver((Driver) Class.forName("com.mysql.jdbc.Driver").newInstance());
-
-
             StringBuilder url = new StringBuilder();
-
             url.
                     append("jdbc:mysql://").        //db type
                     append("localhost:").           //host name
@@ -45,5 +45,18 @@ public class ConnectionFactoryUtil {
             throw new IllegalStateException();
         }
     }
-}
 
+    public Configuration getConfiguration() {
+        Configuration configuration = new Configuration();
+        configuration.addAnnotatedClass(User.class);
+        configuration.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
+        configuration.setProperty("hibernate.connection.driver_class", "com.mysql.cj.jdbc.Driver");
+        configuration.setProperty("hibernate.connection.url", "jdbc:mysql://localhost:3306/mydbteset?serverTimezone=UTC");
+        configuration.setProperty("hibernate.connection.username", "root");
+        configuration.setProperty("hibernate.connection.password", "root");
+        configuration.setProperty("hibernate.show_sql", "true");
+        configuration.setProperty("hibernate.hbm2ddl.auto", "update");
+
+        return configuration;
+    }
+}

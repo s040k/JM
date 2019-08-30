@@ -4,19 +4,18 @@ import model.User;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-
 import java.util.List;
 
-public class UserDAOImpl implements UserDao<User, Long, String> {
+public class UserDaoHibernateImpl implements UserDao<User, Long, String> {
     private Session session;
-    private static UserDAOImpl userDAO;
+    private static UserDaoHibernateImpl userDAO;
 
-    private UserDAOImpl() {
+    private UserDaoHibernateImpl() {
     }
 
-    public static UserDAOImpl getInstance(Session session) {
+    public static UserDaoHibernateImpl getInstance(Session session) {
         if (userDAO == null) {
-            userDAO = new UserDAOImpl();
+            userDAO = new UserDaoHibernateImpl();
         }
         userDAO.session = session;
         return userDAO;

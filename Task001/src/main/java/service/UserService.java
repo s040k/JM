@@ -1,10 +1,7 @@
 package service;
 
-import DAO.UserDAOImpl;
-import DAO.UserDAOJdbc;
 import DAO.UserDao;
-import dbUtil.ConnectionFactoryUtil;
-import dbUtil.SessionFactoryUtil;
+import factory.UserDaoFactory;
 import model.User;
 
 import java.util.List;
@@ -57,7 +54,6 @@ public class UserService {
 
 
     private UserDao<User,Long,String> getUserDao() {
-        return UserDAOJdbc.getInstance(ConnectionFactoryUtil.getInstance().getSqlConnetcion());
-       // return UserDAOImpl.getInstance(SessionFactoryUtil.getInstance().openSession());
+        return UserDaoFactory.createDao("H:\\JM\\GitProject\\Task001\\src\\main\\java\\resources\\test.properties");
     }
 }

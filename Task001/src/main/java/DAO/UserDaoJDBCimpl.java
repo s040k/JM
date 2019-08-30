@@ -6,16 +6,16 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserDAOJdbc implements UserDao<User, Long, String> {
+public class UserDaoJDBCimpl implements UserDao<User, Long, String> {
     private Connection connection;
-    private static UserDAOJdbc userDAOJdbc;
+    private static UserDaoJDBCimpl userDAOJdbc;
 
-    private UserDAOJdbc() {
+    private UserDaoJDBCimpl() {
     }
 
-    public static UserDAOJdbc getInstance(Connection connection) {
+    public static UserDaoJDBCimpl getInstance(Connection connection) {
         if (userDAOJdbc == null) {
-            userDAOJdbc = new UserDAOJdbc();
+            userDAOJdbc = new UserDaoJDBCimpl();
         }
         userDAOJdbc.connection = connection;
         return userDAOJdbc;
