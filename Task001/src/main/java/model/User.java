@@ -1,6 +1,4 @@
 package model;
-
-
 import javax.persistence.*;
 
 @Entity
@@ -21,13 +19,17 @@ public class User {
     @Column
     private String login;
 
+    @Column
+    private String role;
+
     public User() {
     }
 
-    public User(String name, String password, String login) {
+    public User(String name, String password, String login, String role) {
         this.name = name;
         this.password = password;
         this.login = login;
+        this.role = role;
     }
 
     public Long getId() {
@@ -60,5 +62,13 @@ public class User {
 
     public void setLogin(String login) {
         this.login = login;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }

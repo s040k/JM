@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/users/update")
+@WebServlet("/admin/users/update")
 public class UpdateUserServlet extends HttpServlet {
     private UserService userService = UserService.getInstance();
 
@@ -27,13 +27,15 @@ public class UpdateUserServlet extends HttpServlet {
             e.printStackTrace();
         }
 
+        System.out.println("1"+req.getSession().getAttribute("role"));
         if (doUpdateUser != null) {
             req.setAttribute("id", doUpdateUser.getId());
             req.setAttribute("name", doUpdateUser.getName());
             req.setAttribute("login", doUpdateUser.getLogin());
             req.setAttribute("password", doUpdateUser.getPassword());
+            req.setAttribute("role", doUpdateUser.getRole());
 
-            RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/updateUser.jsp");
+            RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/admin/updateUser.jsp");
             requestDispatcher.forward(req, resp);
         } else {
             req.getSession().setAttribute("resultMessage", "Обновление пользователя прошло неуспешно!");
@@ -53,6 +55,7 @@ public class UpdateUserServlet extends HttpServlet {
         doUpdateUser.setName(req.getParameter("name"));
         doUpdateUser.setLogin(req.getParameter("login"));
         doUpdateUser.setPassword(req.getParameter("password"));
+        doUpdateUser.setRole(req.getParameter("role"));
 
         result = userService.updateUser(doUpdateUser);
         String resultMessage = result ?

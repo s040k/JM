@@ -78,7 +78,7 @@ public class UserDaoHibernateImpl implements UserDao<User, Long, String> {
         }
     }
 
-    public boolean validate(User user) {
+    public boolean isExist(User user) {
         boolean result = false;
         Query query = session.createQuery("from User where " +
                 "name = :nameVal and " +
@@ -90,6 +90,21 @@ public class UserDaoHibernateImpl implements UserDao<User, Long, String> {
         query.setString("loginVal", user.getLogin());
         query.setString("passwordVal", user.getPassword());
         result = !query.list().isEmpty();
+
+        session.close();
+        return result;
+    }
+
+    @Override
+    public User validate(String login, String password) {
+        User result = null;
+        Query query = session.createQuery("from User where " +
+                "login = :loginVal and " +
+                "password = :passwordVal"
+        );
+        query.setString("loginVal", login);
+        query.setString("passwordVal", password);
+        result = (User) query.uniqueResult();
 
         session.close();
         return result;

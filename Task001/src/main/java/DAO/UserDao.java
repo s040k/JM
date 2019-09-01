@@ -13,7 +13,9 @@ public interface UserDao<T, E, K> {
 
     public void create(T entity);
 
-    public boolean validate(T entity);
+    public boolean isExist(T entity);
+
+    public T validate(K login, K password);
 
     public T getByLogin(K login);
 }

@@ -52,6 +52,7 @@ public class UserDaoJDBCimpl implements UserDao<User, Long, String> {
                 resultClient.setName(resultSet.getString("name"));
                 resultClient.setLogin(resultSet.getString("login"));
                 resultClient.setPassword(resultSet.getString("password"));
+                resultClient.setRole(resultSet.getString("role"));
             }
             resultSet.close();
 
@@ -64,12 +65,13 @@ public class UserDaoJDBCimpl implements UserDao<User, Long, String> {
     @Override
     public void update(User user) {
         try (PreparedStatement preparedStatement = connection.prepareStatement(
-                "UPDATE users_table SET name =?, login = ?, password = ? WHERE id = ?")) {
+                "UPDATE users_table SET name =?, login = ?, password = ?, role = ? WHERE id = ?")) {
 
             preparedStatement.setString(1, user.getName());
             preparedStatement.setString(2, user.getLogin());
             preparedStatement.setString(3, user.getPassword());
-            preparedStatement.setLong(4, user.getId());
+            preparedStatement.setString(4, user.getRole());
+            preparedStatement.setLong(5, user.getId());
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
@@ -91,10 +93,11 @@ public class UserDaoJDBCimpl implements UserDao<User, Long, String> {
     @Override
     public void create(User user) {
         try (PreparedStatement preparedStatement = connection.prepareStatement(
-                "insert into users_table(name, login, password) values (?,?,?);")) {
+                "insert into users_table(name, login, password, role) values (?,?,?,?);")) {
             preparedStatement.setString(1, user.getName());
             preparedStatement.setString(2, user.getLogin());
-            preparedStatement.setString(3, user.getPassword() + "");
+            preparedStatement.setString(3, user.getPassword());
+            preparedStatement.setString(4, user.getRole());
             preparedStatement.execute();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -102,7 +105,7 @@ public class UserDaoJDBCimpl implements UserDao<User, Long, String> {
     }
 
     @Override
-    public boolean validate(User user) {
+    public boolean isExist(User user) {
         boolean result = false;
         try (PreparedStatement preparedStatement = connection.prepareStatement(
                 "select * from users_table where name=? and login=? and password=?;")) {
@@ -118,6 +121,26 @@ public class UserDaoJDBCimpl implements UserDao<User, Long, String> {
         }
 
         return result;
+    }
+
+    @Override
+    public User validate(String login, String password) {
+        User resultUser = null;
+        try (PreparedStatement preparedStatement = connection.prepareStatement(
+                "select * from users_table where login=? and password=?;")) {
+            preparedStatement.setString(1, login);
+            preparedStatement.setString(2, password);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                resultUser = getById(resultSet.getLong("id"));
+            }
+
+            resultSet.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return resultUser;
     }
 
     @Override

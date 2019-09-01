@@ -10,11 +10,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/users/add")
+@WebServlet("/admin/users/add")
 public class AddUserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/addUser.jsp");
+        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/admin/addUser.jsp");
         requestDispatcher.forward(req, resp);
     }
 
@@ -27,6 +27,7 @@ public class AddUserServlet extends HttpServlet {
         doAddUser.setName(req.getParameter("name"));
         doAddUser.setLogin(req.getParameter("login"));
         doAddUser.setPassword(req.getParameter("password"));
+        doAddUser.setRole(req.getParameter("role"));
 
         result = userService.addUser(doAddUser);
         String resultMessage = result ?

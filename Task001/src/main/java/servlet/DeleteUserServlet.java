@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/users/delete")
+@WebServlet("/admin/users/delete")
 public class DeleteUserServlet extends HttpServlet {
     private UserService userService = UserService.getInstance();
 
@@ -31,7 +31,7 @@ public class DeleteUserServlet extends HttpServlet {
             req.setAttribute("login", doDeleteUser.getLogin());
 
             resp.setStatus(200);
-            RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/deleteUser.jsp");
+            RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/admin/deleteUser.jsp");
             requestDispatcher.forward(req, resp);
         } else {
             req.getSession().setAttribute("resultMessage", "Операция удаления пользователя прошла не успешно!");

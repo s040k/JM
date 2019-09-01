@@ -10,12 +10,13 @@ import java.util.List;
 public class UserService {
     private static UserService userService;
 
-    public static UserService getInstance(){
-        if(userService==null){
-            userService= new UserService();
+    public static UserService getInstance() {
+        if (userService == null) {
+            userService = new UserService();
         }
         return userService;
     }
+
     private UserService() {
     }
 
@@ -27,8 +28,7 @@ public class UserService {
         if (!user.getName().isEmpty() & !user.getLogin().isEmpty() & !user.getPassword().isEmpty()) {
             if (getUserDao().getByLogin(user.getLogin()) == null) {
                 getUserDao().create(user);
-                System.out.println(getUserDao().validate(user));
-                return getUserDao().validate(user);
+                return getUserDao().isExist(user);
             }
         }
         return false;
@@ -38,7 +38,7 @@ public class UserService {
         if (!user.getName().isEmpty() & !user.getLogin().isEmpty() & !user.getPassword().isEmpty()) {
             if (getUserDao().getByLogin(user.getLogin()) == null || getUserDao().getById(user.getId()).getLogin().equals(user.getLogin())) {
                 getUserDao().update(user);
-                return getUserDao().validate(user);
+                return getUserDao().isExist(user);
             }
         }
         return false;
@@ -46,16 +46,19 @@ public class UserService {
 
     public boolean deleteUser(Long id) {
         getUserDao().delete(id);
-        return getUserDao().getById(id)==null;
+        return getUserDao().getById(id) == null;
     }
 
     public User getUserById(Long id) {
-        return getUserDao().getById(id);
+        return id != null ? getUserDao().getById(id) : null;
     }
 
+    public User validate(String login, String password) {
+        return getUserDao().validate(login, password);
+    }
 
-    private UserDao<User,Long,String> getUserDao() {
-        String path = "H:\\JM\\GitProject\\Task001\\src\\main\\java\\resources\\test.properties";
+    private UserDao<User, Long, String> getUserDao() {
+        String path = "H:\\JM\\GitProject\\Task001\\src\\main\\java\\resources\\daoConfig.properties";
         DaoFactory daoFactory = UserDaoFactory.getDaoFactoryByProperty(path);
         return daoFactory.createDao();
     }

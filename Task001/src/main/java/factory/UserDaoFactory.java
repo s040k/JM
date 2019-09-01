@@ -9,15 +9,12 @@ public class UserDaoFactory {
     public static DaoFactory getDaoFactoryByProperty(String path) {
         String method = getPropertyMethod(path);
 
-        if (method.equals("hibernate")) {
-            return new DaoHibernateFactory();
-        } else if (method.equals("jdbc")) {
+         if (method.equals("jdbc")) {
             return new DaoJdbcFactory();
         } else {
-            throw new RuntimeException();
+            return new DaoHibernateFactory();
         }
     }
-
 
     private static String getPropertyMethod(String path) {
         FileInputStream fis;
