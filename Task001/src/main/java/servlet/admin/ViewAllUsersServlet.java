@@ -1,4 +1,4 @@
-package servlet;
+package servlet.admin;
 
 import model.User;
 import service.UserService;
@@ -18,7 +18,6 @@ public class ViewAllUsersServlet extends HttpServlet {
         List<User> users = userService.getAllUsers();
         req.setAttribute("simpleUsers", users);
         resp.setStatus(200);
-//        req.getRequestDispatcher("allUsers.jsp").forward(req, resp);
         req.getRequestDispatcher("/admin/allUsers.jsp").forward(req, resp);
     }
 }

@@ -20,12 +20,11 @@ public class AuthorizationServlet extends HttpServlet {
 
         String login = req.getParameter("login");
         String password = req.getParameter("password");
-        System.out.println(" LOG/PASS:"+login+" "+password);
         User authUser = userService.validate(login, password);
 
         if (authUser != null) {
             req.getSession().setAttribute("id",authUser.getId());
         }
-        resp.sendRedirect("/login");
+        resp.sendRedirect("/");
     }
 }

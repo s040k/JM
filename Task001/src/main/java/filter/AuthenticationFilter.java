@@ -1,16 +1,13 @@
 package filter;
-
-import com.sun.deploy.net.HttpRequest;
 import model.User;
 import service.UserService;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebFilter(urlPatterns = {"/users/*", "/admin/*"}, filterName = "authenticationFilter")
+@WebFilter(urlPatterns = {"/user/*", "/admin/*"}, filterName = "authenticationFilter")
 public class AuthenticationFilter implements Filter {
 
     @Override
@@ -29,7 +26,7 @@ public class AuthenticationFilter implements Filter {
         if (user == null || user.getRole()==null) {
             result = false;
 
-        } else if (uri.startsWith("/users")) {
+        } else if (uri.startsWith("/user")) {
             result = user.getRole().equals("admin") || user.getRole().equals("user");
 
         } else if (uri.startsWith("/admin")) {
@@ -42,6 +39,7 @@ public class AuthenticationFilter implements Filter {
         if (result) {
             filterChain.doFilter(servletRequest, servletResponse);
         } else {
+            httpRequest.getSession().setAttribute("resultMessage", "У вас недостаточно прав для просмотра данной страницы.");
             servletRequest.getRequestDispatcher("/errorPage.jsp").forward(servletRequest, servletResponse);
         }
     }

@@ -12,8 +12,24 @@
 </head>
 <body>
 <hr>
-<p align="center">Развлекайся братюнь</p>
+<p align="center">Личная страница ${requestScope.name}</p>
 <hr/>
+
+<table cellspacing="5" border="5" align="center">
+    <tr>
+        <td>
+            Информация о пользователе:<br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Name: ${requestScope.name}<br/>
+            Login: ${requestScope.login} <br/>
+            Password: ${requestScope.password} <br/>
+        </td>
+    </tr>
+</table>
+
 
 <center>
     <form action="${pageContext.request.contextPath}/logOut" method="get">

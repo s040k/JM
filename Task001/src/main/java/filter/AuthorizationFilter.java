@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebFilter(urlPatterns = "/login")
+@WebFilter(urlPatterns = "/")
 public class AuthorizationFilter implements Filter {
 
     @Override
@@ -28,9 +28,9 @@ public class AuthorizationFilter implements Filter {
         if (user != null && user.getRole() != null && ((user.getRole().equals("admin") || user.getRole().equals("user")))) {
 
             if (user.getRole().equals("user")) {
-                ((HttpServletResponse) servletResponse).sendRedirect("/user/userPage.jsp");
+                ((HttpServletResponse) servletResponse).sendRedirect("/user");
             } else {
-                ((HttpServletResponse) servletResponse).sendRedirect("admin/users");
+                ((HttpServletResponse) servletResponse).sendRedirect("/admin");
             }
 
         } else {

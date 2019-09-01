@@ -1,14 +1,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>На хуй иди!!!</title>
+    <title>Ошибка</title>
 </head>
 <body>
 <hr>
-<p align="center">Ошибка</p>
+<p align="center">Ошибка! ${sessionScope.resultMessage}</p>
 <hr/>
 <center>
-    <form action="/login" method="get">
+    <form action="/" method="get">
         <input type="submit" value="Вернуться на главную страницу" align="center"/>
     </form>
 </center>

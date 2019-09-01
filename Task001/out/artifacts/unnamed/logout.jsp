@@ -19,7 +19,7 @@
     <form action="/logOut" method="post">
         <input type="submit" value="Выйти"/>
     </form>
-    <form action="/login" method="get">
+    <form action="/" method="get">
         <input type="submit" value="Отмена"/>
     </form>
 </center>

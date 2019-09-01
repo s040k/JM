@@ -16,7 +16,7 @@
     <input type="hidden" name="action" value="delete"/>
     <input type="submit" value="Ок"/>
 </form>
-<form action="/login" method="get">
+<form action="/" method="get">
     <input type="submit" value="Отмена"/>
 </form>
 </center>
