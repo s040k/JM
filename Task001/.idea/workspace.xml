@@ -6,56 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a724dca-72a6-4caf-a319-bbbe74008364" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/admin/MainAdminServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/user/MainUserServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/user/ViewUserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/filter/AuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/filter/AuthenticationFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/filter/AuthorizationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/filter/AuthorizationFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/servlet/AddUserServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/servlet/AuthorizationServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/servlet/AuthorizationServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/servlet/DeleteUserServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/servlet/LogOutServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/servlet/LogOutServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/servlet/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/servlet/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/servlet/UpdateUserServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/servlet/ViewAllUsersServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/unnamed/admin/addUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/unnamed/admin/addUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/unnamed/admin/deleteUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/unnamed/admin/deleteUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/unnamed/admin/updateUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/unnamed/admin/updateUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/unnamed/errorPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/unnamed/errorPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/unnamed/logout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/unnamed/logout.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/unnamed/resultPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/unnamed/resultPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/unnamed/user/userPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/unnamed/user/userPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/unnamed/welcomePage.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/filter/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filter/AuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/filter/AuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filter/AuthorizationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/daoConfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/daoConfig.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/AddUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/admin/AddUserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/AuthorizationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/AuthorizationServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/DeleteUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/admin/DeleteUserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/LogOutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/LogOutServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/UpdateUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/admin/UpdateUserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/ViewAllUsersServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/admin/ViewAllUsersServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/filter/AuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/filter/AuthenticationFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/filter/AuthorizationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/filter/AuthorizationFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/servlet/AddUserServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/servlet/AuthorizationServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlet/AuthorizationServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/servlet/DeleteUserServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/servlet/LogOutServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlet/LogOutServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/servlet/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlet/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/servlet/UpdateUserServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/servlet/ViewAllUsersServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/addUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/addUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/deleteUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/deleteUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/updateUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/updateUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/errorPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/errorPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/logout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/logout.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resultPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/resultPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/user/userPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/user/userPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/welcomePage.jsp" beforeDir="false" />
-    </list>
+    <list default="true" id="1a724dca-72a6-4caf-a319-bbbe74008364" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +71,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -347,7 +298,7 @@
       <workItem from="1567180184434" duration="9312000" />
       <workItem from="1567264624475" duration="11670000" />
       <workItem from="1567280978395" duration="17347000" />
-      <workItem from="1567338917593" duration="8902000" />
+      <workItem from="1567338917593" duration="9231000" />
     </task>
     <task id="LOCAL-00001" summary="test 0:46">
       <created>1567028796494</created>
@@ -426,7 +377,21 @@
       <option name="project" value="LOCAL" />
       <updated>1567348008179</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Первые правки 4-е задание 01,09">
+      <created>1567355320170</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1567355320170</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Первые правки 4-е задание 01,09">
+      <created>1567355330264</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1567355330264</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
