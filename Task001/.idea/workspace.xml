@@ -6,56 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a724dca-72a6-4caf-a319-bbbe74008364" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Task001.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/filter/AuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/filter/AuthorizationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/AuthorizationServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/LogOutServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/admin/addUser.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/errorPage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/logout.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/user/userPage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/welcomePage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Task001_Web_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/unnamed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/factory/UserDaoFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/factory/UserDaoFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/servlet/ViewAllUsersServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/servlet/ViewAllUsersServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/test.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/UserDaoHibernateImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDaoHibernateImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/UserDaoJDBCimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDaoJDBCimpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dbUtil/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dbUtil/DBHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/factory/UserDaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factory/UserDaoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/daoConfig.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/AddUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/AddUserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/DeleteUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/DeleteUserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/UpdateUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/UpdateUserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/ViewAllUsersServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/ViewAllUsersServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DAO/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DAO/UserDaoHibernateImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/UserDaoHibernateImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DAO/UserDaoJDBCimpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/UserDaoJDBCimpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dbUtil/DBHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dbUtil/DBHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/factory/UserDaoFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/factory/UserDaoFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/servlet/AddUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlet/AddUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/servlet/DeleteUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlet/DeleteUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/servlet/UpdateUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlet/UpdateUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/servlet/ViewAllUsersServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlet/ViewAllUsersServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/addUser.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/allUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/allUsers.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/deleteUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/deleteUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resultPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/resultPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/updateUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/updateUser.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="1a724dca-72a6-4caf-a319-bbbe74008364" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -347,7 +298,7 @@
       <workItem from="1567180184434" duration="9312000" />
       <workItem from="1567264624475" duration="11670000" />
       <workItem from="1567280978395" duration="17347000" />
-      <workItem from="1567338917593" duration="3298000" />
+      <workItem from="1567338917593" duration="3568000" />
     </task>
     <task id="LOCAL-00001" summary="test 0:46">
       <created>1567028796494</created>
@@ -405,7 +356,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567175340607</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Первые правки 4-е задание 01,09">
+      <created>1567347986166</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1567347986166</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,6 +391,7 @@
     <MESSAGE value="Третьи правки 29,08" />
     <MESSAGE value="Первые правки 3-е задание 30,08" />
     <MESSAGE value="Вторые правки 3-е задание 30,08" />
-    <option name="LAST_COMMIT_MESSAGE" value="Вторые правки 3-е задание 30,08" />
+    <MESSAGE value="Первые правки 4-е задание 01,09" />
+    <option name="LAST_COMMIT_MESSAGE" value="Первые правки 4-е задание 01,09" />
   </component>
 </project>
