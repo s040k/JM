@@ -2,11 +2,66 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="unnamed" />
+      <artifact name="Task001:Web exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a724dca-72a6-4caf-a319-bbbe74008364" name="Default Changelist" comment="" />
+    <list default="true" id="1a724dca-72a6-4caf-a319-bbbe74008364" name="Default Changelist" comment="Первые правки 4-е задание 01,09">
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/ResultServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/unnamed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Task001_Web_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task001.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Task001.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/DAO/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/DAO/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/DAO/UserDaoHibernateImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/DAO/UserDaoHibernateImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/DAO/UserDaoJDBCimpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/DAO/UserDaoJDBCimpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/dbUtil/DBHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/dbUtil/DBHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/servlet/AddUserServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/servlet/DeleteUserServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/servlet/UpdateUserServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/servlet/ViewAllUsersServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/test.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/lib/tomcat-servlet-api-9.0.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/resultPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/resultPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/DAO/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/DAO/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/DAO/UserDaoHibernateImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/DAO/UserDaoHibernateImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/DAO/UserDaoJDBCimpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/DAO/UserDaoJDBCimpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/daoConfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/daoConfig.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/filter/AuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/filter/AuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/filter/AuthorizationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/filter/AuthorizationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/servlet/admin/AddUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/classes/servlet/admin/AddUserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/unnamed/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/UserDaoHibernateImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDaoHibernateImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/UserDaoJDBCimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDaoJDBCimpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/filter/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filter/AuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/filter/AuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filter/AuthorizationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/AuthorizationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/AuthorizationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/LogOutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/LogOutServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/admin/AddUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/admin/AddUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/admin/DeleteUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/admin/DeleteUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/admin/UpdateUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/admin/UpdateUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/user/ViewUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/user/ViewUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/UserDaoHibernateImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/UserDaoHibernateImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/UserDaoJDBCimpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/UserDaoJDBCimpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/daoConfig.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/filter/AuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/filter/AuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/filter/AuthorizationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/filter/AuthorizationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servlet/AuthorizationServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlet/AuthorizationServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servlet/LogOutServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlet/LogOutServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servlet/admin/AddUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlet/admin/AddUserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servlet/admin/DeleteUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlet/admin/DeleteUserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servlet/admin/UpdateUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlet/admin/UpdateUserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servlet/user/ViewUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlet/user/ViewUserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/errorPage.jsp" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +125,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.2091954" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -107,10 +162,11 @@
     </configuration>
     <configuration name="Tomcat 7.0.96" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.96" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/login" />
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="START_JAVASCRIPT_DEBUGGER" value="true" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="unnamed">
+        <artifact name="Task001:Web exploded">
           <settings>
             <option name="CONTEXT_PATH" value="" />
           </settings>
@@ -119,6 +175,7 @@
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="_Task001" />
       </server-settings>
+      <log_file alias="test" path="$PROJECT_DIR$/../.." />
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
       <predefined_log_file id="Tomcat Manager" />
@@ -175,7 +232,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="unnamed" />
+          <artifact name="Task001:Web exploded" />
         </option>
       </method>
     </configuration>
@@ -299,6 +356,11 @@
       <workItem from="1567264624475" duration="11670000" />
       <workItem from="1567280978395" duration="17347000" />
       <workItem from="1567338917593" duration="9231000" />
+      <workItem from="1567355675523" duration="780000" />
+      <workItem from="1567432381033" duration="3415000" />
+      <workItem from="1567435897480" duration="1080000" />
+      <workItem from="1567440083672" duration="555000" />
+      <workItem from="1567440869287" duration="3616000" />
     </task>
     <task id="LOCAL-00001" summary="test 0:46">
       <created>1567028796494</created>
@@ -391,7 +453,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567355330264</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Первые правки 4-е задание 01,09">
+      <created>1567355847301</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1567355847301</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

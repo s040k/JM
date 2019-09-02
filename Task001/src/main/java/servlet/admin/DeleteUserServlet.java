@@ -35,7 +35,7 @@ public class DeleteUserServlet extends HttpServlet {
             requestDispatcher.forward(req, resp);
         } else {
             req.getSession().setAttribute("resultMessage", "Операция удаления пользователя прошла не успешно!");
-            resp.sendRedirect("/resultPage.jsp");
+            resp.sendRedirect("/result");
         }
 
     }
@@ -51,7 +51,7 @@ public class DeleteUserServlet extends HttpServlet {
                 "Пользователь успешно удален!" :
                 "Операция удаления пользователя прошла не успешно!";
         req.getSession().setAttribute("resultMessage", resultMessage);
-        resp.sendRedirect("/resultPage.jsp");
+        resp.sendRedirect("/result");
     }
 
 }

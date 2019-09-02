@@ -12,7 +12,7 @@ import org.hibernate.service.ServiceRegistry;
 
 import java.util.List;
 
-public class UserDaoHibernateImpl implements UserDao<User, Long, String> {
+public class UserDaoHibernateImpl implements UserDao {
     private Session session;
     private static UserDaoHibernateImpl userDAO;
 

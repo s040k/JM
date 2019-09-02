@@ -23,7 +23,7 @@ public class AuthorizationServlet extends HttpServlet {
         User authUser = userService.validate(login, password);
 
         if (authUser != null) {
-            req.getSession().setAttribute("id",authUser.getId());
+            req.getSession().setAttribute("user",authUser);
         }
         resp.sendRedirect("/");
     }

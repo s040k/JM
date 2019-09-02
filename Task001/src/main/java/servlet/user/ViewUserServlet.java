@@ -14,15 +14,12 @@ import java.io.IOException;
 public class ViewUserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        UserService userService = UserService.getInstance();
-        Long idUser = (Long) req.getSession().getAttribute("id");
-        User user =  userService.getUserById(idUser);
+        User user = (User) req.getSession().getAttribute("user");
 
-        if(user!=null){
             req.setAttribute("name",user.getName());
             req.setAttribute("login",user.getLogin());
             req.setAttribute("password",user.getPassword());
-        }
+
         req.getRequestDispatcher("/user/userPage.jsp").forward(req, resp);
 
     }

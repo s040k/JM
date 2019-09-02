@@ -35,6 +35,7 @@ public class AddUserServlet extends HttpServlet {
                 "Пользователь " + doAddUser.getLogin() + " не может быть добавлен в базу!";
         resp.setStatus(result ? 202 : 406);
         req.getSession().setAttribute("resultMessage",resultMessage);
-        resp.sendRedirect("/resultPage.jsp");
+        //req.getRequestDispatcher("/resultPage.jsp").forward(req, resp);
+        resp.sendRedirect("/result");
     }
 }

@@ -1,21 +1,23 @@
 package DAO;
 
+import model.User;
+
 import java.util.List;
 
-public interface UserDao<T, E, K> {
-    public List<T> getAll();
+public interface UserDao {
+    List<User> getAll();
 
-    public T getById(E id);
+    User getById(Long id);
 
-    public void update(T entity);
+    void update(User entity);
 
-    public void delete(E id);
+    void delete(Long id);
 
-    public void create(T entity);
+    void create(User entity);
 
-    public boolean isExist(T entity);
+    boolean isExist(User entity);
 
-    public T validate(K login, K password);
+    User validate(String login, String password);
 
-    public T getByLogin(K login);
+    User getByLogin(String login);
 }

@@ -39,7 +39,7 @@ public class UpdateUserServlet extends HttpServlet {
             requestDispatcher.forward(req, resp);
         } else {
             req.getSession().setAttribute("resultMessage", "Обновление пользователя прошло неуспешно!");
-            resp.sendRedirect("/resultPage.jsp");
+            resp.sendRedirect("/result");
         }
 
     }
@@ -62,6 +62,6 @@ public class UpdateUserServlet extends HttpServlet {
                 "Пользователь " + doUpdateUser.getLogin() + " успешно обновлен!" :
                 "Обновление пользователя " + doUpdateUser.getLogin() + " прошло неуспешно!";
         req.getSession().setAttribute("resultMessage", resultMessage);
-        resp.sendRedirect("/resultPage.jsp");
+        resp.sendRedirect("/result");
     }
 }

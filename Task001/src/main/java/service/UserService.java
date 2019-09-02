@@ -57,7 +57,7 @@ public class UserService {
         return getUserDao().validate(login, password);
     }
 
-    private UserDao<User, Long, String> getUserDao() {
+    private UserDao getUserDao() {
         String path = "H:\\JM\\GitProject\\Task001\\src\\main\\java\\resources\\daoConfig.properties";
         DaoFactory daoFactory = UserDaoFactory.getDaoFactoryByProperty(path);
         return daoFactory.createDao();

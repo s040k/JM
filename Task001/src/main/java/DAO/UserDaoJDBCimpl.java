@@ -6,7 +6,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserDaoJDBCimpl implements UserDao<User, Long, String> {
+public class UserDaoJDBCimpl implements UserDao {
     private Connection connection;
     private static UserDaoJDBCimpl userDAOJdbc;
 
