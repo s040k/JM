@@ -105,7 +105,6 @@ public class UserDaoHibernateImpl implements UserDao {
         query.setString("loginVal", login);
         query.setString("passwordVal", password);
         result = (User) query.uniqueResult();
-
         session.close();
         return result;
     }
