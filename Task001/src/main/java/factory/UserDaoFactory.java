@@ -21,10 +21,14 @@ public class UserDaoFactory {
         Properties property = new Properties();
         String resultMethod = "";
         try {
-            fis = new FileInputStream(path);
+            //fis = new FileInputStream(path);
+            fis = new FileInputStream(UserDaoFactory.class.getClassLoader().getResource("daoConfig.properties").getPath());
             property.load(fis);
 
             resultMethod = property.getProperty("db.method");
+            System.out.println(UserDaoFactory.class.getClassLoader().getResource("daoConfig.properties"));
+            System.out.println(UserDaoFactory.class.getClassLoader().getResource("daoConfig.properties").getAuthority());
+            System.out.println(UserDaoFactory.class.getClassLoader().getResource("daoConfig.properties").getPath());
             System.out.println(resultMethod);
 
         } catch (IOException e) {
