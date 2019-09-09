@@ -38,7 +38,6 @@ public class UserController {
     public String addUserPost(@RequestParam String name, @RequestParam String login, @RequestParam String password, HttpSession session){
         boolean result;
         User doAddUser = new User();
-        System.out.println(name+" "+login+" "+password);
         doAddUser.setName(name);
         doAddUser.setLogin(login);
         doAddUser.setPassword(password);
@@ -112,7 +111,6 @@ public class UserController {
     @PostMapping("/users/update")
     public String updateUserPost(@RequestParam String id, @RequestParam String name, @RequestParam String login, @RequestParam String password, HttpSession session) {
         boolean result = false;
-        System.out.println(id+" "+name+" "+login+" "+password);
         User doUpdateUser = new User();
 
         doUpdateUser.setId(Long.parseLong(id));

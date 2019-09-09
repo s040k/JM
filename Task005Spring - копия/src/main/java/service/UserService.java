@@ -15,6 +15,4 @@ public interface UserService {
 
     boolean addUser(User entity);
 
-    User getUserByLogin(String login);
-
 }

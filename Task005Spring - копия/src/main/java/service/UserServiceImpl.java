@@ -39,7 +39,6 @@ public class UserServiceImpl implements UserService {
     public boolean updateUser(User user) {
         if (!user.getName().isEmpty() & !user.getLogin().isEmpty() & !user.getPassword().isEmpty()) {
             if (userDao.getByLogin(user.getLogin()) == null || userDao.getById(user.getId()).getLogin().equals(user.getLogin())) {
-                System.out.println(user);
                 userDao.update(user);
                 return userDao.validate(user);
             }
@@ -57,11 +56,5 @@ public class UserServiceImpl implements UserService {
     public User getUserById(Long id) {
         return userDao.getById(id);
     }
-
-    @Transactional
-    public User getUserByLogin(String login) {
-        return userDao.getByLogin(login);
-    }
-
 
 }
