@@ -6,89 +6,72 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
+import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 import java.util.List;
 
-@Repository
+//@Repository
+@Component
 public class UserDAOImpl implements UserDao {
-    private SessionFactory sessionFactory;
 
-    @Autowired
-    public void setSession(SessionFactory sessionFactory) {
-        this.sessionFactory = sessionFactory;
-    }
+    @PersistenceContext(unitName = "entityManagerFactory")
+    private EntityManager entityManager;
 
     public List<User> getAll() {
-        List<User> result = null;
-        Session session = sessionFactory.getCurrentSession();
-        Query query = session.createQuery("from User");
-        result = query.list();
-
-        return result;
+        return entityManager.createQuery("select u from User u", User.class).getResultList();
     }
 
     public void update(User user) {
-        Session session = sessionFactory.getCurrentSession();
-        Query query = session.createQuery("update User set name=:nameVal, login=:loginVal, password=:passwordVal where id = :idVal");
-        query.setString("nameVal", user.getName());
-        query.setString("loginVal", user.getLogin());
-        query.setString("passwordVal", user.getPassword());
-        query.setLong("idVal", user.getId());
-
-        query.executeUpdate();
+        entityManager.merge(user);
     }
 
     @Override
     public void create(User user) {
-        Session session = sessionFactory.getCurrentSession();
-        session.save(user);
+        entityManager.merge(user);
     }
 
     public void delete(Long id) {
-        Session session = sessionFactory.getCurrentSession();
-        Query query = session.createQuery("delete from User where id = :idValue");
-        query.setLong("idValue", id);
-        query.executeUpdate();
-
+        entityManager.remove(getById(id));
     }
 
     public boolean validate(User user) {
-        boolean result = false;
-        Session session = sessionFactory.getCurrentSession();
-        Query query = session.createQuery("from User where " +
-                "name = :nameVal and " +
-                "login = :loginVal and " +
-                "password = :passwordVal"
-        );
+        TypedQuery<User> query = entityManager.createQuery("select u from User u where " +
+                        "name = :nameVal and " +
+                        "login = :loginVal and " +
+                        "password = :passwordVal"
+                , User.class);
 
-        query.setString("nameVal", user.getName());
-        query.setString("loginVal", user.getLogin());
-        query.setString("passwordVal", user.getPassword());
-        result = !query.list().isEmpty();
-
-        return result;
+        query.setParameter("nameVal", user.getName());
+        query.setParameter("loginVal", user.getLogin());
+        query.setParameter("passwordVal", user.getPassword());
+        try {
+            query.getSingleResult();
+            return true;
+        } catch (NoResultException e) {
+            return false;
+        }
     }
 
     public User getById(Long id) {
-        User result = null;
-        Session session = sessionFactory.getCurrentSession();
-        Query query = session.createQuery("from User where id = :idVal");
-        query.setLong("idVal", id);
-        result = (User) query.uniqueResult();
-
-        return result;
+        return entityManager.find(User.class, id);
     }
 
     public User getByLogin(String login) {
-        Session session = sessionFactory.getCurrentSession();
         User result = null;
-        Query query = session.createQuery("from User where login = :loginVal");
-        query.setString("loginVal", login);
-        result = (User) query.uniqueResult();
+        TypedQuery<User> query = entityManager.createQuery("select u from User u where login=:loginVal", User.class);
+        query.setParameter("loginVal", login);
+        try {
+            result = query.getSingleResult();
+        } catch (NoResultException e) {
 
+        }
         return result;
     }
 
