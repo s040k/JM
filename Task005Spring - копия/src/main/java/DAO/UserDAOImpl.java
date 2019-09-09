@@ -7,6 +7,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -30,7 +32,13 @@ public class UserDAOImpl implements UserDao {
 
     public void update(User user) {
         Session session = sessionFactory.getCurrentSession();
-        session.update(user);
+        Query query = session.createQuery("update User set name=:nameVal, login=:loginVal, password=:passwordVal where id = :idVal");
+        query.setString("nameVal", user.getName());
+        query.setString("loginVal", user.getLogin());
+        query.setString("passwordVal", user.getPassword());
+        query.setLong("idVal", user.getId());
+
+        query.executeUpdate();
     }
 
     @Override

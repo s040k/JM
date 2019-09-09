@@ -6,14 +6,12 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 import service.UserService;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
-//@RequestMapping("/")
 @ComponentScan(basePackages = {"web","service"})
 public class UserController {
     private UserService userService;
@@ -26,16 +24,14 @@ public class UserController {
 
     @GetMapping("/users")
     public String showAllUserGet(Model model) {
-        ModelAndView modelAndView =new ModelAndView();
-
         List<User> users = userService.getAllUsers();
         model.addAttribute("simpleUsers", users);
-        return "/allUsers";
+        return "allUsers";
     }
 
     @GetMapping("/users/add")
     public String addUserGet(){
-        return "/addUser";
+        return "addUser";
     }
 
     @PostMapping("/users/add")
@@ -70,7 +66,7 @@ public class UserController {
             model.addAttribute("id", doDeleteUser.getId());
             model.addAttribute("login", doDeleteUser.getLogin());
 
-            return "/deleteUser";
+            return "deleteUser";
         } else {
             session.setAttribute("resultMessage", "Операция удаления пользователя прошла не успешно!");
             return "redirect:/result";
@@ -92,6 +88,7 @@ public class UserController {
     @GetMapping("/users/update")
     public String updateUserGet(@RequestParam String id, Model model, HttpSession session) {
         User doUpdateUser = null;
+        System.out.println(id);
 
         try {
             doUpdateUser = userService.getUserById(Long.parseLong(id));
@@ -105,7 +102,7 @@ public class UserController {
             model.addAttribute("login", doUpdateUser.getLogin());
             model.addAttribute("password", doUpdateUser.getPassword());
 
-            return "/updateUser";
+            return "updateUser";
         } else {
             session.setAttribute("resultMessage", "Обновление пользователя прошло неуспешно!");
             return "redirect:/result";
@@ -115,7 +112,7 @@ public class UserController {
     @PostMapping("/users/update")
     public String updateUserPost(@RequestParam String id, @RequestParam String name, @RequestParam String login, @RequestParam String password, HttpSession session) {
         boolean result = false;
-
+        System.out.println(id+" "+name+" "+login+" "+password);
         User doUpdateUser = new User();
 
         doUpdateUser.setId(Long.parseLong(id));
@@ -133,7 +130,7 @@ public class UserController {
 
     @GetMapping("/result")
     public String resultPageGet(Model model) {
-        return "/resultPage";
+        return "resultPage";
     }
 
 }
