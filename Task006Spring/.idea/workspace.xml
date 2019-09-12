@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Task001:Web exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1a724dca-72a6-4caf-a319-bbbe74008364" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/Task001.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/Task001.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/src/main/java/DAO/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/src/main/java/DAO/UserDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/src/main/java/config/HibernateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/src/main/java/config/HibernateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/src/main/java/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/src/main/java/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/src/main/java/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/src/main/java/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/src/main/java/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/src/main/java/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/DAO/UserDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/DAO/UserDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/config/HibernateConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/config/HibernateConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/config/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/service/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/target/classes/DAO/UserDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/target/classes/DAO/UserDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/target/classes/config/HibernateConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/target/classes/config/HibernateConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/target/classes/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/target/classes/config/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/target/classes/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/target/classes/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/target/classes/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/target/classes/service/UserServiceImpl.class" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Task001" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Tag Library Descriptor" />
+        <option value="Jsp File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1PsqGFdZ83K7sD8hLgSYsgwUiEe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2091954" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\JM\GitProject\Task001\web\user" />
+      <recent name="H:\JM\GitProject\Task001\web\admin" />
+      <recent name="H:\JM\GitProject\Task001\web" />
+      <recent name="H:\JM\GitProject\Task001\web\WEB-INF" />
+      <recent name="H:\JM\GitProject\Task001\src\main\java\resources" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\JM\GitProject\Task001\web" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 7.0.96">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Task001" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 7.0.96" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.96" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/login" />
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="START_JAVASCRIPT_DEBUGGER" value="true" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Task001:Web exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_Task001" />
+      </server-settings>
+      <log_file alias="test" path="$PROJECT_DIR$/../.." />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="13484" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Task001:Web exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" editBeforeRun="true" APPLICATION_SERVER_NAME="Tomcat 7.0.96" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <file path="$PROJECT_DIR$">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </file>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_Task001" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="13484" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Tomcat Server.Tomcat 7.0.96" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@5bff35c1" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1a724dca-72a6-4caf-a319-bbbe74008364" name="Default Changelist" comment="" />
+      <created>1566673053351</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1566673053351</updated>
+      <workItem from="1566673057087" duration="2069000" />
+      <workItem from="1566720244826" duration="16774000" />
+      <workItem from="1566805421008" duration="16724000" />
+      <workItem from="1566841875209" duration="36000" />
+      <workItem from="1566902002463" duration="27412000" />
+      <workItem from="1566938365714" duration="2068000" />
+      <workItem from="1566996517658" duration="11497000" />
+      <workItem from="1567028281943" duration="1442000" />
+      <workItem from="1567075180501" duration="4534000" />
+      <workItem from="1567084548101" duration="504000" />
+      <workItem from="1567085233305" duration="10828000" />
+      <workItem from="1567152161498" duration="14878000" />
+      <workItem from="1567180184434" duration="9312000" />
+      <workItem from="1567264624475" duration="11670000" />
+      <workItem from="1567280978395" duration="17347000" />
+      <workItem from="1567338917593" duration="9231000" />
+      <workItem from="1567355675523" duration="780000" />
+      <workItem from="1567432381033" duration="3415000" />
+      <workItem from="1567435897480" duration="1080000" />
+      <workItem from="1567440083672" duration="555000" />
+      <workItem from="1567440869287" duration="4923000" />
+      <workItem from="1567521146446" duration="3441000" />
+      <workItem from="1567699702536" duration="2791000" />
+      <workItem from="1567709504505" duration="451000" />
+      <workItem from="1567793783463" duration="7606000" />
+      <workItem from="1568291668401" duration="823000" />
+    </task>
+    <task id="LOCAL-00001" summary="test 0:46">
+      <created>1567028796494</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1567028796494</updated>
+    </task>
+    <task id="LOCAL-00002" summary="test 0:46">
+      <created>1567028826453</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1567028826453</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Первые правки, после учета критики Никиты">
+      <created>1567077321657</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1567077321657</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Первые правки, после учета критики Никиты">
+      <created>1567077423755</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1567077423755</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Третьи правки 29,08">
+      <created>1567095348477</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1567095348477</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Первые правки 3-е задание 30,08">
+      <created>1567172645438</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1567172645439</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Вторые правки 3-е задание 30,08">
+      <created>1567175332239</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1567175332239</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Вторые правки 3-е задание 30,08">
+      <created>1567175340607</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1567175340607</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Первые правки 4-е задание 01,09">
+      <created>1567347986166</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1567347986166</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Первые правки 4-е задание 01,09">
+      <created>1567348000408</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1567348000408</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Первые правки 4-е задание 01,09">
+      <created>1567348008179</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1567348008179</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Первые правки 4-е задание 01,09">
+      <created>1567355320170</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1567355320170</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Первые правки 4-е задание 01,09">
+      <created>1567355330264</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1567355330264</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Первые правки 4-е задание 01,09">
+      <created>1567355847301</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1567355847301</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Первые правки 4-е задание 02,09">
+      <created>1567445606229</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1567445606229</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Первые правки 4-е задание 02,09">
+      <created>1567445611753</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1567445611753</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="test 0:46" />
+    <MESSAGE value="Первые правки, после учета критики Никиты" />
+    <MESSAGE value="Третьи правки 29,08" />
+    <MESSAGE value="Первые правки 3-е задание 30,08" />
+    <MESSAGE value="Вторые правки 3-е задание 30,08" />
+    <MESSAGE value="Первые правки 4-е задание 01,09" />
+    <MESSAGE value="Первые правки 4-е задание 02,09" />
+    <option name="LAST_COMMIT_MESSAGE" value="Первые правки 4-е задание 02,09" />
+  </component>
+</project>

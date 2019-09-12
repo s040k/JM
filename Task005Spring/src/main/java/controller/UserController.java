@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import service.UserService;
-
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
@@ -20,7 +19,6 @@ public class UserController {
     public void setUserService(UserService userService) {
         this.userService = userService;
     }
-
 
     @GetMapping("/users")
     public String showAllUserGet(Model model) {

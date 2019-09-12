@@ -8,23 +8,22 @@
   <component name="ChangeListManager">
     <list default="true" id="1a724dca-72a6-4caf-a319-bbbe74008364" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/factory/UserDaoFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Task001_Web_exploded/WEB-INF/classes/factory/UserDaoFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/factory/UserDaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factory/UserDaoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/factory/UserDaoFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/factory/UserDaoFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task005Spring/out/artifacts/Task001_Web_exploded/WEB-INF/classes/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/out/artifacts/Task001_Web_exploded/WEB-INF/classes/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task005Spring/out/artifacts/Task001_Web_exploded/WEB-INF/classes/filter/MainFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/out/artifacts/Task001_Web_exploded/WEB-INF/classes/filter/MainFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task005Spring/out/artifacts/Task001_Web_exploded/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task005Spring/out/artifacts/Task001_Web_exploded/addUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/out/artifacts/Task001_Web_exploded/addUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task005Spring/out/artifacts/Task001_Web_exploded/allUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/out/artifacts/Task001_Web_exploded/allUsers.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task005Spring/out/artifacts/Task001_Web_exploded/resultPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/out/artifacts/Task001_Web_exploded/resultPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/Task001.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/Task001.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/src/main/java/DAO/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/src/main/java/DAO/UserDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/src/main/java/config/HibernateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/src/main/java/config/HibernateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/src/main/java/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/src/main/java/config/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Task005Spring/src/main/java/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/src/main/java/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task005Spring/src/main/java/filter/MainFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/src/main/java/filter/MainFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/src/main/java/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/src/main/java/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/DAO/UserDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/DAO/UserDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/config/HibernateConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/config/HibernateConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/config/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/service/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/target/classes/DAO/UserDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/target/classes/DAO/UserDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/target/classes/config/HibernateConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/target/classes/config/HibernateConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/target/classes/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/target/classes/config/WebConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Task005Spring/target/classes/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/target/classes/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task005Spring/target/classes/filter/MainFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/target/classes/filter/MainFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task005Spring/web/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task005Spring/web/addUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/web/addUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task005Spring/web/allUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/web/allUsers.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task005Spring/web/resultPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/web/resultPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task005Spring/target/classes/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Task005Spring/target/classes/service/UserServiceImpl.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +85,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Spring/JM-887b25c3ea34280dd40f7448a548508e417e4d78/Task001" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Task005Spring" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2091954" />
@@ -329,6 +328,7 @@
       <workItem from="1567699702536" duration="2791000" />
       <workItem from="1567709504505" duration="451000" />
       <workItem from="1567793783463" duration="7606000" />
+      <workItem from="1568291668401" duration="957000" />
     </task>
     <task id="LOCAL-00001" summary="test 0:46">
       <created>1567028796494</created>

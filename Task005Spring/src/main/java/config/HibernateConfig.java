@@ -1,24 +1,13 @@
 package config;
 
 import org.apache.tomcat.dbcp.dbcp2.BasicDataSource;
-import org.hibernate.Hibernate;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.orm.hibernate5.HibernateTransactionManager;
-import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-
-
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import javax.sql.DataSource;
-import javax.transaction.TransactionManager;
-import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
@@ -36,7 +25,7 @@ public class HibernateConfig {
     }
 
     @Bean
-    public LocalContainerEntityManagerFactoryBean entityManagerFactory(){
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
 
         HibernateJpaVendorAdapter hibernateJpaVendorAdapter = new HibernateJpaVendorAdapter();
         LocalContainerEntityManagerFactoryBean localContainerEntityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
@@ -54,6 +43,5 @@ public class HibernateConfig {
 
         return transactionManager;
     }
-
 
 }

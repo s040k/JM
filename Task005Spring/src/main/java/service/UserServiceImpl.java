@@ -3,6 +3,7 @@ package service;
 import DAO.UserDao;
 import model.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,8 +18,6 @@ public class UserServiceImpl implements UserService {
     public void setUserDao(UserDao userDao) {
         this.userDao = userDao;
     }
-
-
 
     public List<User> getAllUsers() {
         return userDao.getAll();

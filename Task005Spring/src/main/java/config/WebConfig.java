@@ -11,7 +11,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = {"config","controller","service","model","DAO"})
+@ComponentScan(basePackages = {"config","service"/*,"model"*/,"DAO","controller"})
 public class WebConfig implements WebMvcConfigurer {
 
     @Override
@@ -28,4 +28,4 @@ public class WebConfig implements WebMvcConfigurer {
 
         return viewResolver;
     }
-}
+   }

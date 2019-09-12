@@ -17,8 +17,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
-//@Repository
-@Component
+@Repository
 public class UserDAOImpl implements UserDao {
 
     @PersistenceContext(unitName = "entityManagerFactory")
