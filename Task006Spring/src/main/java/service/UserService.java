@@ -4,31 +4,45 @@ import DAO.UserDao;
 import factory.DaoFactory;
 import factory.UserDaoFactory;
 import model.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+@Service
+@Transactional
 public class UserService {
-    private static UserService userService;
+//    private static UserService userService;
 
-    public static UserService getInstance() {
-        if (userService == null) {
-            userService = new UserService();
-        }
-        return userService;
+    private UserDao userDao;
+
+    @Autowired
+    @Qualifier("userDaoHibernateImpl")
+    public void setUserDao(UserDao userDao) {
+        this.userDao = userDao;
     }
 
-    private UserService() {
-    }
+//    public static UserService getInstance() {
+//        if (userService == null) {
+//            userService = new UserService();
+//        }
+//        return userService;
+//    }
+//
+//    private UserService() {
+//    }
 
     public List<User> getAllUsers() {
-        return getUserDao().getAll();
+        return userDao.getAll();
     }
 
     public boolean addUser(User user) {
         if (!user.getName().isEmpty() & !user.getLogin().isEmpty() & !user.getPassword().isEmpty()) {
-            if (getUserDao().getByLogin(user.getLogin()) == null) {
-                getUserDao().create(user);
-                return getUserDao().isExist(user);
+            if (userDao.getByLogin(user.getLogin()) == null) {
+                userDao.create(user);
+                return userDao.isExist(user);
             }
         }
         return false;
@@ -36,30 +50,30 @@ public class UserService {
 
     public boolean updateUser(User user) {
         if (!user.getName().isEmpty() & !user.getLogin().isEmpty() & !user.getPassword().isEmpty()) {
-            if (getUserDao().getByLogin(user.getLogin()) == null || getUserDao().getById(user.getId()).getLogin().equals(user.getLogin())) {
-                getUserDao().update(user);
-                return getUserDao().isExist(user);
+            if (userDao.getByLogin(user.getLogin()) == null || userDao.getById(user.getId()).getLogin().equals(user.getLogin())) {
+                userDao.update(user);
+                return userDao.isExist(user);
             }
         }
         return false;
     }
 
     public boolean deleteUser(Long id) {
-        getUserDao().delete(id);
-        return getUserDao().getById(id) == null;
+        userDao.delete(id);
+        return userDao.getById(id) == null;
     }
 
     public User getUserById(Long id) {
-        return id != null ? getUserDao().getById(id) : null;
+        return id != null ? userDao.getById(id) : null;
     }
 
     public User validate(String login, String password) {
-        return getUserDao().validate(login, password);
+        return userDao.validate(login, password);
     }
 
-    private UserDao getUserDao() {
-        String path = "H:\\JM\\GitProject\\Task001\\src\\main\\java\\resources\\daoConfig.properties";
-        DaoFactory daoFactory = UserDaoFactory.getDaoFactoryByProperty(path);
-        return daoFactory.createDao();
-    }
+//    private UserDao getUserDao() {
+//        String path = "H:\\JM\\GitProject\\Task001\\src\\main\\java\\resources\\daoConfig.properties";
+//        DaoFactory daoFactory = UserDaoFactory.getDaoFactoryByProperty(path);
+//        return daoFactory.createDao();
+//    }
 }

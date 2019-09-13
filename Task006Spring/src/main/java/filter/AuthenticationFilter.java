@@ -27,12 +27,15 @@ public class AuthenticationFilter implements Filter {
         User user = (User) httpRequest.getSession().getAttribute("user");
 
         if (user != null) {
+            System.out.println(user.getRole());
             if (uri.startsWith("/user")) {
                 result = user.getRole().equals("admin") || user.getRole().equals("user");
 
             } else if (uri.startsWith("/admin")) {
                 result = user.getRole().equals("admin");
             }
+        }else {
+            System.out.println("Нету роли");
         }
 
         if (result) {

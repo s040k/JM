@@ -29,7 +29,7 @@ public class AuthorizationFilter implements Filter {
                 ((HttpServletResponse) servletResponse).sendRedirect("/admin");
             }
         } else {
-            filterChain.doFilter(servletRequest, servletResponse);
+            ((HttpServletResponse) servletResponse).sendRedirect("/login");
         }
     }
 

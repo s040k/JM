@@ -1,11 +1,13 @@
 package DAO;
 
 import model.User;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class UserDaoJDBCimpl implements UserDao {
     private Connection connection;
     private static UserDaoJDBCimpl userDAOJdbc;

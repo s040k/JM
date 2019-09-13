@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/admin/users/add")
+//@WebServlet("/admin/users/add")
 public class AddUserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -20,22 +20,21 @@ public class AddUserServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("UTF-8");
-        boolean result;
-        UserService userService = UserService.getInstance();
-        User doAddUser = new User();
-        doAddUser.setName(req.getParameter("name"));
-        doAddUser.setLogin(req.getParameter("login"));
-        doAddUser.setPassword(req.getParameter("password"));
-        doAddUser.setRole(req.getParameter("role"));
-
-        result = userService.addUser(doAddUser);
-        String resultMessage = result ?
-                "Пользователь " + doAddUser.getLogin() + " успешно добавлен!" :
-                "Пользователь " + doAddUser.getLogin() + " не может быть добавлен в базу!";
-        resp.setStatus(result ? 202 : 406);
-        req.getSession().setAttribute("resultMessage",resultMessage);
-        //req.getRequestDispatcher("/resultPage.jsp").forward(req, resp);
-        resp.sendRedirect("/result");
+//        req.setCharacterEncoding("UTF-8");
+//        boolean result;
+//        UserService userService = UserService.getInstance();
+//        User doAddUser = new User();
+//        doAddUser.setName(req.getParameter("name"));
+//        doAddUser.setLogin(req.getParameter("login"));
+//        doAddUser.setPassword(req.getParameter("password"));
+//        doAddUser.setRole(req.getParameter("role"));
+//
+//        result = userService.addUser(doAddUser);
+//        String resultMessage = result ?
+//                "Пользователь " + doAddUser.getLogin() + " успешно добавлен!" :
+//                "Пользователь " + doAddUser.getLogin() + " не может быть добавлен в базу!";
+//        resp.setStatus(result ? 202 : 406);
+//        req.getSession().setAttribute("resultMessage",resultMessage);
+//        resp.sendRedirect("/result");
     }
 }
