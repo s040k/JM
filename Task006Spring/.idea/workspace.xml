@@ -8,15 +8,33 @@
   <component name="ChangeListManager">
     <list default="true" id="1a724dca-72a6-4caf-a319-bbbe74008364" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/DAO/UserDaoJDBCimpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/config/HibernateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/config/HibernateConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/config/SpringSecurityInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/config/SpringSecurityInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/config/WebAppInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/config/WebAppInit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/dbUtil/DBHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/factory/DaoFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/factory/DaoHibernateFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/factory/DaoJdbcFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/factory/UserDaoFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/config/SecurityConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/config/SpringSecurityInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/config/SpringSecurityInitializer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/config/WebAppInit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/config/WebAppInit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/factory/DaoHibernateFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/factory/DaoHibernateFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/service/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/DAO/UserDaoJDBCimpl.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/app/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/config/SecurityConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/app/config/SpringSecurityInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/config/SpringSecurityInitializer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/app/config/WebAppInit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/config/WebAppInit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/dbUtil/DBHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/factory/DaoFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/factory/DaoHibernateFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/factory/DaoJdbcFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/factory/UserDaoFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/service/UserServiceImpl.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,8 +64,8 @@
       <list>
         <option value="Tag Library Descriptor" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -327,7 +345,7 @@
       <workItem from="1568291668401" duration="823000" />
       <workItem from="1568292835538" duration="12765000" />
       <workItem from="1568463276062" duration="10163000" />
-      <workItem from="1568516910449" duration="11837000" />
+      <workItem from="1568516910449" duration="17968000" />
     </task>
     <task id="LOCAL-00001" summary="test 0:46">
       <created>1567028796494</created>
@@ -497,7 +515,21 @@
       <option name="project" value="LOCAL" />
       <updated>1568537677231</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Первые правки 6-е задание 15,09">
+      <created>1568539851583</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1568539851583</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Первые правки 6-е задание 15,09">
+      <created>1568539965653</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1568539965653</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

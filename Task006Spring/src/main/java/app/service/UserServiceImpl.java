@@ -3,7 +3,6 @@ package app.service;
 import app.DAO.UserDao;
 import app.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -16,7 +15,6 @@ public class UserServiceImpl implements UserService {
     private UserDao userDao;
 
     @Autowired
-    @Qualifier("userDaoHibernateImpl")
     public void setUserDao(UserDao userDao) {
         this.userDao = userDao;
     }

@@ -21,7 +21,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {//Основ�
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         User user = userService.getByLogin(s);
         System.out.println("Проверочки секьюра "+user.getLogin()+" "+user.getPassword()+" :"+user.getRole());
-        System.out.println(user);
         return user;
     }
 }
