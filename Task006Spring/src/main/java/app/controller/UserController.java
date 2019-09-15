@@ -3,14 +3,11 @@ package app.controller;
 import app.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import app.service.UserService;
 
-import javax.servlet.http.HttpServletRequest;
 import java.security.Principal;
 
 @Controller

@@ -1,6 +1,5 @@
 package app.config;
 
-import app.model.enums.UserRoleEnum;
 import app.service.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -38,11 +37,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         // включаем защиту от CSRF атак
         http.csrf()
                 .disable()
-                // указываем правила запросов
-                // по которым будет определятся доступ к ресурсам и остальным данным
-               .authorizeRequests()
+                .authorizeRequests()
                 .antMatchers("/admin/**").hasRole("ADMIN")
-                .antMatchers("/user/**").hasAnyRole("ADMIN","USER")
+                .antMatchers("/user/**").hasAnyRole("ADMIN", "USER")
                 .anyRequest().permitAll()
                 .and();
 
@@ -52,20 +49,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .failureUrl("/")
                 .usernameParameter("j_username")
                 .passwordParameter("j_password")
-                .defaultSuccessUrl("/",true)
-                // даем доступ к форме логина всем
+                .defaultSuccessUrl("/", true)
                 .permitAll();
 
         http.logout()
                 .permitAll()
                 .logoutUrl("/logout")
                 .logoutSuccessUrl("/")
-                // делаем не валидной текущую сессию
                 .invalidateHttpSession(true);
     }
 
-    // Указываем Spring контейнеру, что надо инициализировать ShaPasswordEncoder
-    // Это можно вынести в WebAppConfig, но для понимаемости оставил тут
+    //Реализовать если захочешь шифровать пароли
     @Bean
     public ShaPasswordEncoder getShaPasswordEncoder() {
         return new ShaPasswordEncoder();

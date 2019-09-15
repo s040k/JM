@@ -15,24 +15,10 @@ public class UserDaoHibernateImpl implements UserDao {
     @PersistenceContext(unitName = "entityManagerFactory")
     private EntityManager entityManager;
 
-
-//    private Session session;
-//    private static UserDaoHibernateImpl userDAO;
-//
-//    private UserDaoHibernateImpl() {
-//    }
-//
-//    public static UserDaoHibernateImpl getInstance(Configuration configuration) {
-//        if (userDAO == null) {
-//            userDAO = new UserDaoHibernateImpl();
-//        }
-//        userDAO.session = createSessionFactory(configuration).openSession();
-//        return userDAO;
-//    }
-
     public List<User> getAll() {
         return entityManager.createQuery("select u from User u", User.class).getResultList();
     }
+
     public void update(User user) {
         entityManager.merge(user);
     }
@@ -49,7 +35,7 @@ public class UserDaoHibernateImpl implements UserDao {
         TypedQuery<User> query = entityManager.createQuery("select u from User u where " +
                         "name = :nameVal and " +
                         "login = :loginVal and " +
-                        "password = :passwordVal and "+
+                        "password = :passwordVal and " +
                         "role = :roleVal"
                 , User.class);
 

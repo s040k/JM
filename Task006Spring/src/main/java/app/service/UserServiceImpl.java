@@ -12,7 +12,6 @@ import java.util.List;
 @Service
 @Transactional
 public class UserServiceImpl implements UserService {
-//    private static UserService userService;
 
     private UserDao userDao;
 
@@ -21,16 +20,6 @@ public class UserServiceImpl implements UserService {
     public void setUserDao(UserDao userDao) {
         this.userDao = userDao;
     }
-
-//    public static UserService getInstance() {
-//        if (userService == null) {
-//            userService = new UserService();
-//        }
-//        return userService;
-//    }
-//
-//    private UserService() {
-//    }
 
     public List<User> getAllUsers() {
         return userDao.getAll();
@@ -73,10 +62,4 @@ public class UserServiceImpl implements UserService {
     public User getByLogin(String login) {
         return userDao.getByLogin(login);
     }
-
-//    private UserDao getUserDao() {
-//        String path = "H:\\JM\\GitProject\\Task001\\src\\main\\java\\resources\\daoConfig.properties";
-//        DaoFactory daoFactory = UserDaoFactory.getDaoFactoryByProperty(path);
-//        return daoFactory.createDao();
-//    }
 }
