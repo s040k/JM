@@ -62,7 +62,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     public ShaPasswordEncoder getShaPasswordEncoder() {
         return new ShaPasswordEncoder();
-
     }
 
     @Bean
@@ -70,5 +69,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new UserDetailsServiceImpl();
     }
 
-    
 }
