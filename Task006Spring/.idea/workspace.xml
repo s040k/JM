@@ -7,34 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a724dca-72a6-4caf-a319-bbbe74008364" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/filter/AuthenticationFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/filter/AuthorizationFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/servlet/AuthorizationServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/servlet/LogOutServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/servlet/LoginServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/servlet/ResultServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/servlet/admin/AddUserServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/servlet/admin/DeleteUserServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/servlet/admin/MainAdminServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/servlet/admin/UpdateUserServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/servlet/admin/ViewAllUsersServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/servlet/user/MainUserServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/servlet/user/ViewUserServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/pages/eror.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/filter/AuthenticationFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/filter/AuthorizationFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/servlet/AuthorizationServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/servlet/LogOutServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/servlet/LoginServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/servlet/ResultServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/servlet/admin/AddUserServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/servlet/admin/DeleteUserServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/servlet/admin/MainAdminServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/servlet/admin/UpdateUserServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/servlet/admin/ViewAllUsersServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/servlet/user/MainUserServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/servlet/user/ViewUserServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/config/SpringSecurityInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/config/SpringSecurityInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/config/WebAppInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/config/WebAppInit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/config/SpringSecurityInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/config/SpringSecurityInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/config/WebAppInit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/config/WebAppInit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/config/SpringSecurityInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/config/SpringSecurityInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/config/WebAppInit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/config/WebAppInit.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -345,7 +327,7 @@
       <workItem from="1568291668401" duration="823000" />
       <workItem from="1568292835538" duration="12765000" />
       <workItem from="1568463276062" duration="10163000" />
-      <workItem from="1568516910449" duration="10277000" />
+      <workItem from="1568516910449" duration="11837000" />
     </task>
     <task id="LOCAL-00001" summary="test 0:46">
       <created>1567028796494</created>
@@ -501,7 +483,21 @@
       <option name="project" value="LOCAL" />
       <updated>1568537324728</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Первые правки 6-е задание 15,09">
+      <created>1568537670089</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1568537670090</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Первые правки 6-е задание 15,09">
+      <created>1568537677231</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1568537677231</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -69,4 +69,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public UserDetailsService getUserDetailsService() {
         return new UserDetailsServiceImpl();
     }
+
+    
 }
