@@ -18,9 +18,9 @@
         Password:<input type="password" name="password"/>
         Role:
         <label for="role1">User</label>
-        <input type="radio" id="role1" name="role" value="user" checked/>
+        <input type="radio" id="role1" name="role" value="ROLE_USER" checked/>
         <label for="role2">Admin</label>
-        <input type="radio" id="role2" name="role" value="admin"/><br>
+        <input type="radio" id="role2" name="role" value="ROLE_ADMIN"/><br>
         <br>
         <input type="submit" value="Добавить"/>
 

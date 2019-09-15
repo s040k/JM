@@ -9,13 +9,13 @@
 <p align="center">Авторизуемся!</p>
 <hr/>
 <table cellspacing="5" border="0" align="center">
-    <form action="/authorization" method="post">
+    <form action="/j_spring_security_check" method="post">
         <tr>
             <td>
                 Login:
             </td>
             <td>
-                <input type="text" name="login"/><br>
+                <input type="text" name="j_username"/><br>
             </td>
         </tr>
         <tr>
@@ -23,7 +23,7 @@
                 Password:
             </td>
             <td>
-                <input type="password" name="password"/><br>
+                <input type="password" name="j_password"/><br>
             </td>
         </tr>
         <tr>
@@ -37,3 +37,34 @@
 </table>
 </body>
 </html>
+
+
+<%--<table cellspacing="5" border="0" align="center">--%>
+<%--    <form action="/authorization" method="post">--%>
+<%--        <tr>--%>
+<%--            <td>--%>
+<%--                Login:--%>
+<%--            </td>--%>
+<%--            <td>--%>
+<%--                <input type="text" name="login"/><br>--%>
+<%--            </td>--%>
+<%--        </tr>--%>
+<%--        <tr>--%>
+<%--            <td>--%>
+<%--                Password:--%>
+<%--            </td>--%>
+<%--            <td>--%>
+<%--                <input type="password" name="password"/><br>--%>
+<%--            </td>--%>
+<%--        </tr>--%>
+<%--        <tr>--%>
+<%--            <td>--%>
+<%--            </td>--%>
+<%--            <td>--%>
+<%--                <input type="submit" value="Вход" width="10"/>--%>
+<%--            </td>--%>
+<%--        </tr>--%>
+<%--    </form>--%>
+<%--</table>--%>
+<%--</body>--%>
+<%--</html>--%>

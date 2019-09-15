@@ -16,7 +16,7 @@
 
 <!--        <dependency>-->
 <!--            <groupId>org.apache.tomcat</groupId>-->
-<!--            <artifactId>tomcat-servlet-api</artifactId>-->
+<!--            <artifactId>tomcat-app.servlet-api</artifactId>-->
 <!--            <version>7.0.96</version>-->
 <!--        </dependency>-->
 
@@ -76,6 +76,12 @@
 
         <dependency>
             <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>5.1.1.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
             <version>5.1.1.RELEASE</version>
         </dependency>
@@ -116,6 +122,30 @@
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-dbcp</artifactId>
             <version>9.0.10</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>3.2.0.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>3.2.0.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>3.2.0.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-taglibs</artifactId>
+            <version>3.2.0.RELEASE</version>
         </dependency>
 
 

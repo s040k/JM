@@ -18,9 +18,9 @@
         Password:<input type="text" name="password" value="${requestScope.password}"/>
         Role:
         <label for="role1">User</label>
-        <input type="radio" id="role1" name="role" value="user" <c:out value="${role.equals('user')?'checked':''}"/>>
+        <input type="radio" id="role1" name="role" value="ROLE_USER" <c:out value="${role.equals('ROLE_USER')?'checked':''}"/>>
         <label for="role2">Admin</label>
-        <input type="radio" id="role2" name="role" value="admin" <c:out value="${role.equals('admin')?'checked':''}"/>>
+        <input type="radio" id="role2" name="role" value="ROLE_ADMIN" <c:out value="${role.equals('ROLE_ADMIN')?'checked':''}"/>>
         <br>
         <br>
         <input type="submit" value="Изменить"/>
