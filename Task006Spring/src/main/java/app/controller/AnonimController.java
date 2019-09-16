@@ -14,7 +14,7 @@ import app.service.UserService;
 import java.util.Collection;
 
 @Controller
-@ComponentScan(basePackages = {"web", "app.service"})
+@ComponentScan(basePackages = {"app.service"})
 public class AnonimController {
     private UserService userService;
 

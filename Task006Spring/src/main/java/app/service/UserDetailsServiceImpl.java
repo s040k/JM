@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 
 @Service
-public class UserDetailsServiceImpl implements UserDetailsService {//Основная логика аутентификации
+public class UserDetailsServiceImpl implements UserDetailsService {
     private UserService userService;
 
     @Autowired

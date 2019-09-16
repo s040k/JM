@@ -11,7 +11,7 @@ import app.service.UserService;
 import java.security.Principal;
 
 @Controller
-@ComponentScan(basePackages = {"web", "app.service"})
+@ComponentScan(basePackages = {"app.service"})
 public class UserController {
     private UserService userService;
 

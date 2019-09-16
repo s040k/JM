@@ -15,7 +15,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(securedEnabled = true)
-@ComponentScan(basePackages = {"app"})
+@ComponentScan(basePackages = {"app.service","app.config"})
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private UserDetailsServiceImpl userDetailsService;
@@ -29,6 +29,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public void registerGlobalAuthentication(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService);
     }
+
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {

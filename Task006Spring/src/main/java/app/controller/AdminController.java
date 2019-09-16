@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
-@ComponentScan(basePackages = {"web", "app.service"})
+@ComponentScan(basePackages = {"app.service"})
 public class AdminController {
     private UserService userService;
 
