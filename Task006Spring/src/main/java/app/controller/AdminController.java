@@ -3,8 +3,6 @@ package app.controller;
 import app.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,13 +26,6 @@ public class AdminController {
 
     @GetMapping("/admin")
     public String mainUserPageGet() {
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        System.out.println(auth==null);
-        if(auth!=null){
-            for(Object x:auth.getAuthorities().toArray()){
-                System.out.println(x);
-            }
-        }
         return "redirect:/admin/users";
     }
 
@@ -46,7 +37,7 @@ public class AdminController {
     }
 
     @GetMapping("/admin/users/add")
-    public String addUserGet(){
+    public String addUserGet() {
         return "/admin/addUser";
     }
 
@@ -56,7 +47,7 @@ public class AdminController {
             @RequestParam String login,
             @RequestParam String password,
             @RequestParam String role,
-            HttpSession session){
+            HttpSession session) {
         boolean result;
         User doAddUser = new User();
         doAddUser.setName(name);
@@ -109,7 +100,6 @@ public class AdminController {
     @GetMapping("/admin/users/update")
     public String updateUserGet(@RequestParam String id, Model model, HttpSession session) {
         User doUpdateUser = null;
-        System.out.println(id);
 
         try {
             doUpdateUser = userService.getUserById(Long.parseLong(id));

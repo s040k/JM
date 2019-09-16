@@ -56,7 +56,6 @@ public class UserServiceImpl implements UserService {
         return userDao.validate(login, password);
     }
 
-    @Override
     public User getByLogin(String login) {
         return userDao.getByLogin(login);
     }

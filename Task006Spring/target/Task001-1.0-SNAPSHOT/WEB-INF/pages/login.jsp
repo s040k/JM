@@ -9,13 +9,13 @@
 <p align="center">Авторизуемся!</p>
 <hr/>
 <table cellspacing="5" border="0" align="center">
-    <form action="/j_spring_security_check" method="post">
+    <form action="/securityLogin" method="post">
         <tr>
             <td>
                 Login:
             </td>
             <td>
-                <input type="text" name="j_username"/><br>
+                <input type="text" name="securityUsername"/><br>
             </td>
         </tr>
         <tr>
@@ -23,7 +23,7 @@
                 Password:
             </td>
             <td>
-                <input type="password" name="j_password"/><br>
+                <input type="password" name="securityPassword"/><br>
             </td>
         </tr>
         <tr>

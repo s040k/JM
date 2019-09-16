@@ -1,6 +1,5 @@
 package app.service;
 
-import app.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -18,10 +17,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {//Основ�
     }
 
     @Override
-    public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-        User user = userService.getByLogin(s);
-        System.out.println("Проверочки секьюра "+user.getLogin()+" "+user.getPassword()+" :"+user.getRole());
-        return user;
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        return userService.getByLogin(username);
     }
 }
 

@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.authentication.encoding.ShaPasswordEncoder;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -28,7 +27,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     public void registerGlobalAuthentication(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userDetailsService)/*.passwordEncoder(getShaPasswordEncoder())*/;
+        auth.userDetailsService(userDetailsService);
     }
 
     @Override
@@ -43,10 +42,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.formLogin()
                 .loginPage("/login")
-                .loginProcessingUrl("/j_spring_security_check")
+                .loginProcessingUrl("/securityLogin")
                 .failureUrl("/")
-                .usernameParameter("j_username")
-                .passwordParameter("j_password")
+                .usernameParameter("securityUsername")
+                .passwordParameter("securityPassword")
                 .defaultSuccessUrl("/", true)
                 .permitAll();
 
@@ -55,12 +54,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .logoutUrl("/logout")
                 .logoutSuccessUrl("/")
                 .invalidateHttpSession(true);
-    }
-
-    //Реализовать если захочешь шифровать пароли
-    @Bean
-    public ShaPasswordEncoder getShaPasswordEncoder() {
-        return new ShaPasswordEncoder();
     }
 
     @Bean
