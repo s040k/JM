@@ -8,16 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1a724dca-72a6-4caf-a319-bbbe74008364" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/DAO/UserDaoHibernateImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/DAO/UserDaoHibernateImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/AnonimController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/AnonimController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/UserDetailsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/controller/AdminController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/app/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/controller/AdminController.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -331,7 +324,8 @@
       <workItem from="1568463276062" duration="10163000" />
       <workItem from="1568516910449" duration="20855000" />
       <workItem from="1568621799934" duration="1394000" />
-      <workItem from="1568637125048" duration="2200000" />
+      <workItem from="1568637125048" duration="2968000" />
+      <workItem from="1568702971141" duration="2009000" />
     </task>
     <task id="LOCAL-00001" summary="test 0:46">
       <created>1567028796494</created>
@@ -529,7 +523,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568622995658</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Первые правки 6-е задание 16,09">
+      <created>1568642939653</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1568642939653</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
