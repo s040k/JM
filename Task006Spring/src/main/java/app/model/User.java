@@ -1,15 +1,15 @@
 package app.model;
 
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import java.util.*;
 
 @Entity
-@Table(name = "users_table")
+@Table(name = "users_table_test")
 public class User implements UserDetails {
+
 
     @Id
     @Column
@@ -25,24 +25,25 @@ public class User implements UserDetails {
     @Column
     private String login;
 
-    @Column
-    private String role;
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(name = "user_role",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Role> roles = new HashSet<>();
 
     public User() {
     }
 
-    public User(String name, String password, String login, String role) {
+    public User(String name, String password, String login, Set<Role> roles) {
         this.name = name;
         this.password = password;
         this.login = login;
-        this.role = role;
+        this.roles = roles;
     }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        Set<GrantedAuthority> roles = new HashSet<>();
-        roles.add(new SimpleGrantedAuthority(getRole()));
-        return roles;
+        return getRoles();
     }
 
     public String getPassword() {
@@ -103,22 +104,23 @@ public class User implements UserDetails {
         this.login = login;
     }
 
-    public String getRole() {
-        return role;
+    public Set<Role> getRoles() {
+        return roles;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", password='" + password + '\'' +
-                ", login='" + login + '\'' +
-                ", role='" + role + '\'' +
-                '}';
+
+    public boolean rolesIsExisName(NameRoles nameRoles) {
+        for (Role x : roles) {
+            if (x.getNameRole().equals(nameRoles.name())) {
+                return true;
+            }
+        }
+        return false;
     }
 }
+
+

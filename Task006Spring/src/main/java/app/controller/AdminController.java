@@ -1,5 +1,7 @@
 package app.controller;
 
+import app.model.NameRoles;
+import app.model.Role;
 import app.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
@@ -10,8 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import app.service.UserService;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.List;
+import java.util.*;
 
 @Controller
 @ComponentScan(basePackages = {"app.service"})
@@ -37,25 +40,36 @@ public class AdminController {
     }
 
     @GetMapping("/admin/users/add")
-    public String addUserGet() {
+    public String addUserGet(Model model) {
+        NameRoles[] roles = NameRoles.values();
+        model.addAttribute("simpleRoles", roles);
+
         return "/admin/addUser";
     }
 
     @PostMapping("/admin/users/add")
-    public String addUserPost(
-            @RequestParam String name,
-            @RequestParam String login,
-            @RequestParam String password,
-            @RequestParam String role,
-            HttpSession session) {
-        boolean result;
+    public String addUserPost(HttpServletRequest request, HttpSession session) {
+        boolean result = false;
         User doAddUser = new User();
-        doAddUser.setName(name);
-        doAddUser.setLogin(login);
-        doAddUser.setPassword(password);
-        doAddUser.setRole(role);
 
-        result = userService.addUser(doAddUser);
+        doAddUser.setName(request.getParameter("name"));
+        doAddUser.setLogin(request.getParameter("login"));
+        doAddUser.setPassword(request.getParameter("password"));
+
+        Set<Role> roles = new HashSet<>();
+        Enumeration<String> parameterNames = request.getParameterNames();
+        while (parameterNames.hasMoreElements()) {
+            String parName = parameterNames.nextElement();
+            if (parName.contains("checkBoxParameter")) {
+                roles.add(new Role(request.getParameter(parName)));
+            }
+        }
+        doAddUser.setRoles(roles);
+
+        if (!roles.isEmpty()) {
+            result = userService.addUser(doAddUser);
+        }
+
         String resultMessage = result ?
                 "Пользователь " + doAddUser.getLogin() + " успешно добавлен!" :
                 "Пользователь " + doAddUser.getLogin() + " не может быть добавлен в базу!";
@@ -108,11 +122,9 @@ public class AdminController {
         }
 
         if (doUpdateUser != null) {
-            model.addAttribute("id", doUpdateUser.getId());
-            model.addAttribute("name", doUpdateUser.getName());
-            model.addAttribute("login", doUpdateUser.getLogin());
-            model.addAttribute("password", doUpdateUser.getPassword());
-            model.addAttribute("role", doUpdateUser.getRole());
+            model.addAttribute("user", doUpdateUser);
+            NameRoles[] roles = NameRoles.values();
+            model.addAttribute("simpleRoles", roles);
 
             return "/admin/updateUser";
         } else {
@@ -122,24 +134,32 @@ public class AdminController {
     }
 
     @PostMapping("/admin/users/update")
-    public String updateUserPost(
-            @RequestParam String id,
-            @RequestParam String name,
-            @RequestParam String login,
-            @RequestParam String password,
-            @RequestParam String role,
-            HttpSession session) {
+    public String updateUserPost(HttpServletRequest request, HttpSession session) {
 
         boolean result = false;
         User doUpdateUser = new User();
 
-        doUpdateUser.setId(Long.parseLong(id));
-        doUpdateUser.setName(name);
-        doUpdateUser.setLogin(login);
-        doUpdateUser.setPassword(password);
-        doUpdateUser.setRole(role);
+        doUpdateUser.setId(Long.parseLong(request.getParameter("id")));
+        doUpdateUser.setName(request.getParameter("name"));
+        doUpdateUser.setLogin(request.getParameter("login"));
+        doUpdateUser.setPassword(request.getParameter("password"));
 
-        result = userService.updateUser(doUpdateUser);
+
+        Set<Role> roles = new HashSet<>();
+        Enumeration<String> parameterNames = request.getParameterNames();
+        while (parameterNames.hasMoreElements()) {
+            String parName = parameterNames.nextElement();
+            if (parName.contains("checkBoxParameter")) {
+                roles.add(new Role(request.getParameter(parName)));
+            }
+        }
+        doUpdateUser.setRoles(roles);
+
+        if (!roles.isEmpty()) {
+            result = userService.updateUser(doUpdateUser);
+        }
+
+
         String resultMessage = result ?
                 "Пользователь " + doUpdateUser.getLogin() + " успешно обновлен!" :
                 "Обновление пользователя " + doUpdateUser.getLogin() + " прошло неуспешно!";

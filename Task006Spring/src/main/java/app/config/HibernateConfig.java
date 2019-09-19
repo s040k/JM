@@ -9,6 +9,7 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
+import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
@@ -21,7 +22,6 @@ public class HibernateConfig {
         dataSource.setUrl("jdbc:mysql://localhost:3306/mydbteset?serverTimezone=UTC&useSSL=false");
         dataSource.setUsername("root");
         dataSource.setPassword("root");
-
         return dataSource;
     }
 
@@ -32,6 +32,7 @@ public class HibernateConfig {
         localContainerEntityManagerFactoryBean.setDataSource(dataSource());
         localContainerEntityManagerFactoryBean.setJpaVendorAdapter(hibernateJpaVendorAdapter);
         localContainerEntityManagerFactoryBean.setPackagesToScan("app/model");
+        localContainerEntityManagerFactoryBean.setJpaProperties(jpaProperties());
 
         return localContainerEntityManagerFactoryBean;
     }
@@ -42,6 +43,13 @@ public class HibernateConfig {
         jpaTransactionManager.setEntityManagerFactory(entityManagerFactory().getObject());
 
         return jpaTransactionManager;
+    }
+
+    private Properties jpaProperties() {
+        Properties properties = new Properties();
+        properties.put("hibernate.hbm2ddl.auto","update");
+        properties.put("hibernate.show_sql", "true");
+        return properties;
     }
 
 }

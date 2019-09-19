@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Добавляем нового пользователя</title>
@@ -13,14 +14,15 @@
 <center>
     <form action="/admin/users/add" method="post">
 
-        Name:<input type="text" name="name"/>
-        Login:<input type="text" name="login"/>
-        Password:<input type="password" name="password"/>
-        Role:
-        <label for="role1">User</label>
-        <input type="radio" id="role1" name="role" value="ROLE_USER" checked/>
-        <label for="role2">Admin</label>
-        <input type="radio" id="role2" name="role" value="ROLE_ADMIN"/><br>
+        Имя:<input type="text" name="name"/>
+        Логин:<input type="text" name="login"/>
+        Пароль:<input type="password" name="password"/><br>
+        Права:
+        <c:forEach items="${requestScope.simpleRoles}" var="role">
+            <label for="${role.ordinal()}">${role.getPresentationName()}</label>
+            <input type="checkbox" id="${role.ordinal()}" name="checkBoxParameter ${role.ordinal()}" value="${role.name()}">
+        </c:forEach>
+        <br>
         <br>
         <input type="submit" value="Добавить"/>
 

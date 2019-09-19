@@ -12,7 +12,7 @@ import java.util.List;
 @Repository
 public class UserDaoHibernateImpl implements UserDao {
 
-    @PersistenceContext(unitName = "entityManagerFactory")
+    @PersistenceContext
     private EntityManager entityManager;
 
     public List<User> getAll() {
@@ -35,14 +35,12 @@ public class UserDaoHibernateImpl implements UserDao {
         TypedQuery<User> query = entityManager.createQuery("select u from User u where " +
                         "name = :nameVal and " +
                         "login = :loginVal and " +
-                        "password = :passwordVal and " +
-                        "role = :roleVal"
+                        "password = :passwordVal"
                 , User.class);
 
         query.setParameter("nameVal", user.getName());
         query.setParameter("loginVal", user.getLogin());
         query.setParameter("passwordVal", user.getPassword());
-        query.setParameter("roleVal", user.getRole());
         try {
             query.getSingleResult();
             return true;

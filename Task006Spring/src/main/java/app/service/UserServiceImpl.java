@@ -12,12 +12,8 @@ import java.util.List;
 @Transactional
 public class UserServiceImpl implements UserService {
 
-    private UserDao userDao;
-
     @Autowired
-    public void setUserDao(UserDao userDao) {
-        this.userDao = userDao;
-    }
+    private UserDao userDao;
 
     public List<User> getAllUsers() {
         return userDao.getAll();
@@ -36,6 +32,7 @@ public class UserServiceImpl implements UserService {
     public boolean updateUser(User user) {
         if (!user.getName().isEmpty() & !user.getLogin().isEmpty() & !user.getPassword().isEmpty()) {
             if (userDao.getByLogin(user.getLogin()) == null || userDao.getById(user.getId()).getLogin().equals(user.getLogin())) {
+                userDao.delete(user.getId());
                 userDao.update(user);
                 return userDao.isExist(user);
             }

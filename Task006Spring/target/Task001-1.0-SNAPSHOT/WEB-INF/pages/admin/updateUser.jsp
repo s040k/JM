@@ -12,15 +12,17 @@
 
 <center>
     <form action="/admin/users/update" method="post">
-        <input type="hidden" name="id" value="${requestScope.id}"/>
-        Name:<input type="text" name="name" value="${requestScope.name}"/>
-        Login:<input type="text" name="login" value="${requestScope.login}"/>
-        Password:<input type="text" name="password" value="${requestScope.password}"/>
+        <input type="hidden" name="id" value="${requestScope.user.id}"/>
+        Name:<input type="text" name="name" value="${requestScope.user.name}"/>
+        Login:<input type="text" name="login" value="${requestScope.user.login}"/>
+        Password:<input type="text" name="password" value="${requestScope.user.password}"/>
         Role:
-        <label for="role1">User</label>
-        <input type="radio" id="role1" name="role" value="ROLE_USER" <c:out value="${role.equals('ROLE_USER')?'checked':''}"/>>
-        <label for="role2">Admin</label>
-        <input type="radio" id="role2" name="role" value="ROLE_ADMIN" <c:out value="${role.equals('ROLE_ADMIN')?'checked':''}"/>>
+        <c:forEach items="${requestScope.simpleRoles}" var="role">
+            <label for="${role.ordinal()}">${role.getPresentationName()}</label>
+            <input type="checkbox" id="${role.ordinal()}" name="checkBoxParameter ${role.ordinal()}"
+                   value="${role.name()}"
+                <c:out value="${requestScope.user.rolesIsExisName(role)?'checked':'false'}"/>>
+        </c:forEach>
         <br>
         <br>
         <input type="submit" value="Изменить"/>

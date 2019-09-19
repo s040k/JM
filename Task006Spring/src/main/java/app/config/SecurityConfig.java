@@ -9,6 +9,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
 @Configuration
 @EnableWebSecurity
@@ -26,10 +27,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     public void registerGlobalAuthentication(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService);
+        auth.inMemoryAuthentication().withUser("root").password("root").roles("ADMIN");
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        AuthenticationSuccessHandler authenticationSuccessHandler = new RedirectSuccessAuthentication();
+
         http.csrf()
                 .disable()
                 .authorizeRequests()
@@ -41,16 +45,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.formLogin()
                 .loginPage("/login")
                 .loginProcessingUrl("/securityLogin")
-                .failureUrl("/")
+                .failureUrl("/login")
                 .usernameParameter("securityUsername")
                 .passwordParameter("securityPassword")
-                .defaultSuccessUrl("/", true)
+                .successHandler(authenticationSuccessHandler)
                 .permitAll();
 
         http.logout()
                 .permitAll()
                 .logoutUrl("/logout")
-                .logoutSuccessUrl("/")
+                .logoutSuccessUrl("/login")
                 .invalidateHttpSession(true);
     }
 }
