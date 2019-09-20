@@ -47,7 +47,6 @@ public class HibernateConfig {
 
     private Properties jpaProperties() {
         Properties properties = new Properties();
-     //   properties.put("hibernate.hbm2ddl.import_files_sql_extractor","org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor");
         properties.put("hibernate.hbm2ddl.auto","create");
         properties.put("hibernate.show_sql", "true");
         return properties;
