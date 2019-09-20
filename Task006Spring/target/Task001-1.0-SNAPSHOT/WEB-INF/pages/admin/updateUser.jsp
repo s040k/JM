@@ -18,9 +18,9 @@
         Password:<input type="text" name="password" value="${requestScope.user.password}"/>
         Role:
         <c:forEach items="${requestScope.simpleRoles}" var="role">
-            <label for="${role.ordinal()}">${role.getPresentationName()}</label>
-            <input type="checkbox" id="${role.ordinal()}" name="checkBoxParameter ${role.ordinal()}"
-                   value="${role.name()}"
+            <label for="${role.id}">${role.nameRole}</label>
+            <input type="checkbox" id="${role.id}" name="checkBoxParameter ${role.id}"
+                   value="${role.nameRole}"
                 <c:out value="${requestScope.user.rolesIsExisName(role)?'checked':'false'}"/>>
         </c:forEach>
         <br>

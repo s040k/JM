@@ -25,7 +25,7 @@ public class User implements UserDetails {
     @Column
     private String login;
 
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToMany(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
     @JoinTable(name = "user_role",
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
@@ -113,13 +113,24 @@ public class User implements UserDetails {
     }
 
 
-    public boolean rolesIsExisName(NameRoles nameRoles) {
+    public boolean rolesIsExisName(Role role) {
         for (Role x : roles) {
-            if (x.getNameRole().equals(nameRoles.name())) {
+            if (x.getNameRole().equals(role.getNameRole())) {
                 return true;
             }
         }
         return false;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", login='" + login + '\'' +
+                ", roles=" + roles +
+                '}';
     }
 }
 

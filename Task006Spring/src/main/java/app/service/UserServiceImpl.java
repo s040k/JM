@@ -32,7 +32,6 @@ public class UserServiceImpl implements UserService {
     public boolean updateUser(User user) {
         if (!user.getName().isEmpty() & !user.getLogin().isEmpty() & !user.getPassword().isEmpty()) {
             if (userDao.getByLogin(user.getLogin()) == null || userDao.getById(user.getId()).getLogin().equals(user.getLogin())) {
-                userDao.delete(user.getId());
                 userDao.update(user);
                 return userDao.isExist(user);
             }

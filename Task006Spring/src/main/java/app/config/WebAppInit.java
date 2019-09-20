@@ -1,5 +1,6 @@
 package app.config;
 
+import app.security.SecurityConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 
@@ -18,4 +19,5 @@ public class WebAppInit extends AbstractAnnotationConfigDispatcherServletInitial
     protected String[] getServletMappings() {
         return new String[]{"/"};
     }
+
 }

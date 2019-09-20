@@ -1,6 +1,7 @@
-package app.config;
+package app.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -14,8 +15,12 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(securedEnabled = true)
-@ComponentScan(basePackages = {"app.service","app.config"})
+@ComponentScan(basePackages = {"app.service", "app.config", "app.security"})
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    @Qualifier("redirectSuccessAuthentication")
+    private AuthenticationSuccessHandler authenticationSuccessHandler;
 
     private UserDetailsService userDetailsService;
 
@@ -23,6 +28,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public void setUserDetailsService(UserDetailsService userDetailsService) {
         this.userDetailsService = userDetailsService;
     }
+
 
     @Autowired
     public void registerGlobalAuthentication(AuthenticationManagerBuilder auth) throws Exception {
@@ -32,8 +38,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        AuthenticationSuccessHandler authenticationSuccessHandler = new RedirectSuccessAuthentication();
-
         http.csrf()
                 .disable()
                 .authorizeRequests()

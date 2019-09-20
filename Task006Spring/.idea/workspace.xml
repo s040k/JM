@@ -7,50 +7,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a724dca-72a6-4caf-a319-bbbe74008364" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/config/RedirectSuccessAuthentication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/config/SecutityInit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/model/NameRoles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/model/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/DAO/RoleDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/DAO/RoleDaoHibernate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/service/RoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/service/RoleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resources/import.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/DAO/UserDaoHibernateImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/DAO/UserDaoHibernateImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/config/HibernateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/config/HibernateConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/config/SpringSecurityInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/config/RedirectSuccessAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/security/RedirectSuccessAuthentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/config/SecutityInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/security/SecutityInit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/config/WebAppInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/config/WebAppInit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/config/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/AnonimController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/AnonimController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/model/NameRoles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/model/Role.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/model/enums/UserRoleEnum.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/DAO/UserDaoHibernateImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/DAO/UserDaoHibernateImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/config/HibernateConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/config/HibernateConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/config/SpringSecurityInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/config/RedirectSuccessAuthentication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/config/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/config/SecutityInit.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/config/WebAppInit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/config/WebAppInit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/config/WebConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/controller/AdminController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/controller/AnonimController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/controller/AnonimController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/model/NameRoles.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/model/Role.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/model/enums/UserRoleEnum.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/classes/app/service/UserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/pages/admin/addUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/pages/admin/addUser.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/pages/admin/updateUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/pages/admin/updateUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task001-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/app/DAO/UserDaoHibernateImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/DAO/UserDaoHibernateImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/app/config/HibernateConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/config/HibernateConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/config/SpringSecurityInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/config/RedirectSuccessAuthentication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/config/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/config/SecutityInit.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/app/config/WebAppInit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/config/WebAppInit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/config/WebConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/app/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/controller/AdminController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/app/controller/AnonimController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/controller/AnonimController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/model/NameRoles.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/model/Role.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/app/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/model/enums/UserRoleEnum.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/app/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/service/UserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/pages/admin/addUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/admin/addUser.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/pages/admin/updateUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/admin/updateUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,10 +81,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Tag Library Descriptor" />
+        <option value="Enum" />
         <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -113,25 +115,26 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/resources" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2091954" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="H:\JM\GitProject\Task006Spring\web\WEB-INF\pages" />
-      <recent name="H:\JM\GitProject\Task001\web\user" />
-      <recent name="H:\JM\GitProject\Task001\web\admin" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\JM\GitProject\Task006Spring\src\main\java\resources" />
       <recent name="H:\JM\GitProject\Task001\web" />
-      <recent name="H:\JM\GitProject\Task001\web\WEB-INF" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="app.config" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\JM\GitProject\Task006Spring\src\main\java" />
+      <recent name="H:\JM\GitProject\Task006Spring\web\WEB-INF\pages" />
+      <recent name="H:\JM\GitProject\Task001\web\user" />
+      <recent name="H:\JM\GitProject\Task001\web\admin" />
       <recent name="H:\JM\GitProject\Task001\web" />
     </key>
   </component>
@@ -382,7 +385,8 @@
       <workItem from="1568621799934" duration="1394000" />
       <workItem from="1568637125048" duration="2968000" />
       <workItem from="1568702971141" duration="56188000" />
-      <workItem from="1568893689133" duration="16319000" />
+      <workItem from="1568893689133" duration="19633000" />
+      <workItem from="1568960744390" duration="23023000" />
     </task>
     <task id="LOCAL-00001" summary="test 0:46">
       <created>1567028796494</created>
@@ -601,7 +605,21 @@
       <option name="project" value="LOCAL" />
       <updated>1568711002440</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Первые правки 6-е задание 19,09">
+      <created>1568912725211</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1568912725211</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Первые правки 6-е задание 19,09">
+      <created>1568912733022</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1568912733022</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -636,6 +654,7 @@
     <MESSAGE value="Первые правки 6-е задание 15,09" />
     <MESSAGE value="Вторые правки 6-е задание 15,09" />
     <MESSAGE value="Первые правки 6-е задание 16,09" />
-    <option name="LAST_COMMIT_MESSAGE" value="Первые правки 6-е задание 16,09" />
+    <MESSAGE value="Первые правки 6-е задание 19,09" />
+    <option name="LAST_COMMIT_MESSAGE" value="Первые правки 6-е задание 19,09" />
   </component>
 </project>

@@ -3,10 +3,7 @@ package app.DAO;
 import app.model.User;
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.EntityManager;
-import javax.persistence.NoResultException;
-import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
+import javax.persistence.*;
 import java.util.List;
 
 @Repository
@@ -20,11 +17,11 @@ public class UserDaoHibernateImpl implements UserDao {
     }
 
     public void update(User user) {
-        entityManager.merge(user);
+      entityManager.merge(user);
     }
 
     public void create(User user) {
-        entityManager.merge(user);
+        entityManager.persist(user);
     }
 
     public void delete(Long id) {
@@ -71,6 +68,7 @@ public class UserDaoHibernateImpl implements UserDao {
 
     public User getByLogin(String login) {
         User result = null;
+
         TypedQuery<User> query = entityManager.createQuery("select u from User u where login=:loginVal", User.class);
         query.setParameter("loginVal", login);
         try {

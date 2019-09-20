@@ -1,8 +1,9 @@
 package app.controller;
 
-import app.model.NameRoles;
+
 import app.model.Role;
 import app.model.User;
+import app.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
@@ -19,12 +20,12 @@ import java.util.*;
 @Controller
 @ComponentScan(basePackages = {"app.service"})
 public class AdminController {
-    private UserService userService;
 
     @Autowired
-    public void setUserService(UserService userService) {
-        this.userService = userService;
-    }
+    private RoleService roleService;
+
+    @Autowired
+    private UserService userService;
 
 
     @GetMapping("/admin")
@@ -41,7 +42,7 @@ public class AdminController {
 
     @GetMapping("/admin/users/add")
     public String addUserGet(Model model) {
-        NameRoles[] roles = NameRoles.values();
+        List<Role> roles = roleService.getAll();
         model.addAttribute("simpleRoles", roles);
 
         return "/admin/addUser";
@@ -61,7 +62,7 @@ public class AdminController {
         while (parameterNames.hasMoreElements()) {
             String parName = parameterNames.nextElement();
             if (parName.contains("checkBoxParameter")) {
-                roles.add(new Role(request.getParameter(parName)));
+                roles.add(roleService.getRoleByName(request.getParameter(parName)));
             }
         }
         doAddUser.setRoles(roles);
@@ -123,7 +124,7 @@ public class AdminController {
 
         if (doUpdateUser != null) {
             model.addAttribute("user", doUpdateUser);
-            NameRoles[] roles = NameRoles.values();
+            List<Role> roles = roleService.getAll();
             model.addAttribute("simpleRoles", roles);
 
             return "/admin/updateUser";
@@ -150,7 +151,7 @@ public class AdminController {
         while (parameterNames.hasMoreElements()) {
             String parName = parameterNames.nextElement();
             if (parName.contains("checkBoxParameter")) {
-                roles.add(new Role(request.getParameter(parName)));
+                roles.add(roleService.getRoleByName(request.getParameter(parName)));
             }
         }
         doUpdateUser.setRoles(roles);
