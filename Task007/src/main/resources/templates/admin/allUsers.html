@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Все пользователи</title>
+</head>
+<body>
+<hr>
+<p align="center">Все пользователи</p>
+<hr/>
+
+<table cellspacing="5" border="5" align="center">
+    <tr th:each="user :${simpleUsers}">
+
+        <td>
+            Name:<a th:utext="${user.name}"/><br/>
+            Login:<a th:utext="${user.login}"/> <br/>
+            Password:<a th:utext="${user.password}"/><br/>
+        </td>
+
+        <td>
+            <form action="/admin/users/update" method="get">
+                <input type="hidden" name="id" th:value="${user.id}"/>
+                <input type="submit" value="Изменить"/>
+            </form>
+
+            <form action="/admin/users/delete" method="get">
+                <input type="hidden" name="id" th:value="${user.id}"/>
+                <input type="submit" value="Удалить"/>
+            </form>
+        </td>
+
+    </tr>
+</table>
+
+<center>
+    <form action="/admin/users/add" method="get">
+        <input type="submit" value="Добавить пользователся"/>
+    </form>
+</center>
+<center>
+    <form action="/logout" method="get">
+        <input type="submit" value="Выйти"/>
+    </form>
+</center>
+</body>
+</html>
