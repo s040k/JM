@@ -20,11 +20,6 @@ public class UserController {
         this.userService = userService;
     }
 
-//    @GetMapping("/user")
-//    public String mainUserPageGet() {
-//        return "redirect:/user/info";
-//    }
-
     @GetMapping("/user")
     public String mainUserPageGet() {
         return "redirect:/user/info";
@@ -36,7 +31,7 @@ public class UserController {
 
         model.addAttribute("principalUser", user);
 
-        return "userPage2";
+        return "userPage";
     }
 
 

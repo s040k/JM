@@ -1,11 +1,9 @@
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
-    <!-- See configuration in WebMvConfig.java -->
     <link th:href="@{/bootstrap/css/bootstrap.min.css}"
           rel="stylesheet" media="screen"/>
-    <!--    <link th:href="@{css/adminPage.css}" rel="stylesheet">-->
 
 
     <script th:src="@{/jquery/jquery.min.js}"></script>
@@ -18,19 +16,18 @@
 <body>
 
 <div class="header">
-    <!--    <p>Header</p>-->
+    <!--    Head-->
     <a th:include="navBar.html"></a>
 </div>
 
 <div class="raw flex-line">
     <div class="col-3 nav navigation_page">
-        <!--        <p>Navigation</p>-->
+        <!--        navigation-->
         <a th:include="sideBar.html"></a>
     </div>
 
     <div class="col-9 content">
-        <!--            <p>Content</p>-->
-        <!--            <p>Content</p>-->
+        <!--            Content-->
         <div>
             <h2>User page</h2><br/>
             <h6 th:utext="'Hello '+${principalUser.email}+' '+${principalUser.login}+'!'">All users</h6>

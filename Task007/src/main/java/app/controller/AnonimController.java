@@ -36,20 +36,11 @@ public class AnonimController {
         return "redirect:/login";
     }
 
-    @GetMapping("/logout")
-    public String logoutPageGet() {
-        return "logout";
-    }
 
     @GetMapping("/login")
     public String logingPageGet() {
         return "login";
     }
 
-
-    @GetMapping("/result")
-    public String resultPageGet() {
-        return "resultPage";
-    }
 
 }

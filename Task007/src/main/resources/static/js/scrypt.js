@@ -5,6 +5,7 @@ $('.btn').on('click', function () {
     if ($(this).attr("id") == 'buttonEdit') {
         b = document.getElementById('colId' + a).getAttribute('value');
         document.getElementById('id_seting_user').setAttribute("value", b);
+        document.getElementById('id_hiden_seting_user').setAttribute("value", b);
 
         b = document.getElementById('colEmail' + a).getAttribute('value');
         document.getElementById('email_seting_user').setAttribute("value", b);

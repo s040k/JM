@@ -1,198 +1,200 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
-    <meta charset="UTF-8"/>
-    <title>Все пользователи</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
     <link th:href="@{/bootstrap/css/bootstrap.min.css}"
           rel="stylesheet" media="screen"/>
-
     <script th:src="@{/jquery/jquery.min.js}"></script>
     <script th:src="@{/popper/popper.min.js}"></script>
     <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+    <link href="/css/style.css" rel="stylesheet">
 
-    <link th:href="@{/css/adminPage.css}" rel="stylesheet">
-    <script th:src="@{/js/scrypt.js}" defer></script>
 </head>
+
 <body>
-<div class="col-">
-<!--        <a th:include="navBar.html"></a>-->
+
+<div class="header">
+    <!--   Head-->
+    <a th:include="navBar.html"></a>
 </div>
-<div class="container">
-<!--<div class="container app_container">-->
-    <div class="row">
-        <!--    <div class="col-3 side_bar">-->
-        <div class="col-md-3 no-float side_bar">
-<!--        <div class="nav navbar-nav side-nav side_bar">-->
-                    <div class="nav flex-column nav-pills" data-toggle="collapse" aria-orientation="vertical">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="/admin">Admin</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/user">User</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/test">test</a>
-                        </li>
-                        </ul>
-                    </div>
-        </div>
-        <!--    <div class="col-8 users_panel">-->
-<!--        <div class="col-md-9 col-md-push-3 content">-->
-        <div class="col-md-9 no-float">
-                    <div class="tab-content" id="v-pills-tabContent">
-                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                            <h1>Admin panel</h1>
 
-                            <ul class="nav nav-tabs">
-                                <li class="active">
-                                    <a class="nav-link active" data-toggle="tab" href="#panel1">Users table</a>
-                                </li>
-                                <li>
-                                    <a class="nav-link" data-toggle="tab" href="#panel2">New User</a>
-                                </li>
-                            </ul>
+<div class="raw flex-line">
+    <div class="col-3 nav navigation_page">
+        <!--        Navigation-->
+        <a th:include="sideBar.html"></a>
+    </div>
 
-                            <div class="tab-content">
-                                <!--                    User table-->
-                                <div id="panel1" class="tab-pane fade show active">
-                                    <div class="card">
-                                        <div class="card-header app_card_header">
-                                            <h6>All users</h6>
-                                        </div>
-                                        <!--   <caption>All users</caption>-->
-                                        <div class="card-body app_card_body">
-                                            <table class="table table-hover table-striped borderless">
-                                                <thead>
-                                                <tr>
+    <div class="col-9 content">
+        <!--            Content-->
+        <h2 class="content_body">Admin panel</h2>
+        <div>
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                     aria-labelledby="v-pills-home-tab">
 
-                                                    <th scope="col">ID</th>
-                                                    <th scope="col">Role</th>
-                                                    <th scope="col">Login</th>
-                                                    <th scope="col">Password</th>
-                                                    <th scope="col">Email</th>
-                                                    <th scope="col">Edit</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr th:each="userRow :${simpleUsers}">
-                                                    <td scope="row" th:utext="${userRow.id}" th:value="${userRow.id}"
-                                                        th:id="colId+${userRow.id}"></td>
-                                                    <td th:utext="${userRow.roles}" th:value="${userRow.roles}"
-                                                        th:id="colRoles +${userRow.id}"></td>
-                                                    <td th:utext="${userRow.login}" th:value="${userRow.login}"
-                                                        th:id="colLogin+${userRow.id}"></td>
-                                                    <td th:utext="${userRow.password}" th:value="${userRow.password}"
-                                                        th:id="colPassword+${userRow.id}"></td>
-                                                    <td th:utext="${userRow.email}" th:value="${userRow.email}"
-                                                        th:id="colEmail+${userRow.id}"></td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-primary" data-toggle="modal"
-                                                                id="buttonEdit"
-                                                                data-target="#exampleModal" th:value="${userRow.id}">
-                                                            Edit
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a class="nav-link active" data-toggle="tab" href="#panel1">Users table</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" data-toggle="tab" href="#panel2">New User</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <!--                    User table-->
+                        <div id="panel1" class="tab-pane fade show active">
+                            <div class="card">
+                                <div class="card-header app_card_header">
+                                    <h6>All users</h6>
                                 </div>
-                                <!--                    New user-->
-                                <div id="panel2" class="tab-pane fade">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h6>Add new user</h6>
-                                        </div>
-                                        <div class="card-body text-center">
-                                            </h3>
-                                            <form action="/admin/users/add" method="post" id="add_user">
+                                <!--   Users-->
+                                <div class="card-body app_card_body">
+                                    <table class="table table-hover table-striped borderless">
+                                        <thead>
+                                        <tr>
 
-                                                <div class="form-group">
-                                                    <label for="email_add_user" class="col-form-label"
-                                                    ><h6>Email</h6></label>
-                                                    <input type="text" class="form-control" id="email_add_user" name="email"
-                                                           placeholder="Enter email">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="login_add_user" class="col-form-label"
-                                                    ><h6>Login</h6></label>
-                                                    <input type="text" class="form-control" id="login_add_user" name="login"
-                                                           placeholder="Login">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="password_add_user" class="col-form-label"
-                                                    ><h6>Password</h6></label>
-                                                    <input type="text" class="form-control" id="password_add_user" name="password"
-                                                           placeholder="Password">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="role_add_user" class="col-form-label"
-                                                    ><h6>Role</h6></label>
-                                                    <input type="text" class="form-control" id="role_add_user" name="roles"
-                                                           placeholder="Role">
-                                                </div>
-                                                <div class="center-block">
-                                                    <button type="submit" form="add_user" value="Submit" class="btn btn-success"
-                                                    >Add new user
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Role</th>
+                                            <th scope="col">Login</th>
+                                            <th scope="col">Password</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Edit</th>
+                                            <th scope="col">Delete</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr th:each="userRow :${simpleUsers}">
+                                            <td scope="row" th:utext="${userRow.id}" th:value="${userRow.id}"
+                                                th:id="colId+${userRow.id}"></td>
+                                            <td th:utext="${userRow.role}" th:value="${userRow.role}"
+                                                th:id="colRoles +${userRow.id}"></td>
+                                            <td th:utext="${userRow.login}" th:value="${userRow.login}"
+                                                th:id="colLogin+${userRow.id}"></td>
+                                            <td th:utext="${userRow.password}" th:value="${userRow.password}"
+                                                th:id="colPassword+${userRow.id}"></td>
+                                            <td th:utext="${userRow.email}" th:value="${userRow.email}"
+                                                th:id="colEmail+${userRow.id}"></td>
+                                            <td>
+                                                <button type="button" class="btn btn-info" data-toggle="modal"
+                                                        id="buttonEdit"
+                                                        data-target="#exampleModal" th:value="${userRow.id}">
+                                                    Edit
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <form action="/admin/users/delete" type="get">
+                                                    <input type="hidden" name="id" th:value="${userRow.id}">
+                                                    <button type="submit" class="btn btn-danger">
+                                                        Delete
                                                     </button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                         aria-labelledby="headerModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="headerModalLabel"></h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
+                        <!--                    New user-->
+                        <div id="panel2" class="tab-pane fade">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h6>Add new user</h6>
                                 </div>
-                                <div class="text-center modal-body">
-                                    <form action="/admin/users/update" method="post" id="set_user">
+                                <div class="card-body text-center">
+                                    </h3>
+                                    <form action="/admin/users/add" method="post" id="add_user">
+
                                         <div class="form-group">
-                                            <label for="id_seting_user" class="col-form-label"><h6>ID</h6></label>
-                                            <input type="text" class="form-control" id="id_seting_user" name="id">
+                                            <label for="email_add_user" class="col-form-label"
+                                            ><h6>Email</h6></label>
+                                            <input type="text" class="form-control" id="email_add_user" name="email"
+                                                   placeholder="Enter email">
                                         </div>
                                         <div class="form-group">
-                                            <label for="email_seting_user" class="col-form-label"><h6>Email</h6></label>
-                                            <input type="text" class="form-control" id="email_seting_user" name="email">
+                                            <label for="login_add_user" class="col-form-label"
+                                            ><h6>Login</h6></label>
+                                            <input type="text" class="form-control" id="login_add_user" name="login"
+                                                   placeholder="Login">
                                         </div>
                                         <div class="form-group">
-                                            <label for="login_seting_user" class="col-form-label"><h6>Login</h6></label>
-                                            <input type="text" class="form-control" id="login_seting_user" name="login">
+                                            <label for="password_add_user" class="col-form-label"
+                                            ><h6>Password</h6></label>
+                                            <input type="text" class="form-control" id="password_add_user"
+                                                   name="password"
+                                                   placeholder="Password">
                                         </div>
                                         <div class="form-group">
-                                            <label for="password_seting_user" class="col-form-label "><h6>Password</h6></label>
-                                            <input type="text" class="form-control" id="password_seting_user" name="password">
+                                            <label for="role_add_user" class="col-form-label"
+                                            ><h6>Role</h6></label>
+                                            <input type="text" class="form-control" id="role_add_user" name="roles"
+                                                   placeholder="Role">
                                         </div>
-                                        <div class="form-group">
-                                            <label for="roles_seting_user" class="col-form-label"><h6>Role</h6></label>
-                                            <input type="text" class="form-control" id="roles_seting_user" name="roles">
+                                        <div class="center-block">
+                                            <button type="submit" form="add_user" value="Submit"
+                                                    class="btn btn-success"
+                                            >Add new user
+                                            </button>
                                         </div>
                                     </form>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                                    <button type="submit" form="set_user" value="Submit" class="btn btn-primary">Edit user
-                                    </button>
-                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+     aria-labelledby="headerModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="headerModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="text-center modal-body">
+                <form action="/admin/users/update" method="post" id="set_user">
+                    <div class="form-group">
+                        <label for="id_seting_user" class="col-form-label"><h6>ID</h6></label>
+                        <input type="text" class="form-control" id="id_seting_user" disabled>
+                        <input type="hidden" id="id_hiden_seting_user" name="id">
+                    </div>
+                    <div class="form-group">
+                        <label for="email_seting_user" class="col-form-label"><h6>Email</h6></label>
+                        <input type="text" class="form-control" id="email_seting_user" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="login_seting_user" class="col-form-label"><h6>Login</h6></label>
+                        <input type="text" class="form-control" id="login_seting_user" name="login">
+                    </div>
+                    <div class="form-group">
+                        <label for="password_seting_user" class="col-form-label "><h6>Password</h6></label>
+                        <input type="text" class="form-control" id="password_seting_user" name="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="roles_seting_user" class="col-form-label"><h6>Role</h6></label>
+                        <input type="text" class="form-control" id="roles_seting_user" name="roles">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                <button type="submit" form="set_user" value="Submit" class="btn btn-primary">Edit user
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<script th:src="@{/js/scrypt.js}"></script>
+<script type="text/javascript">
+    adminPageClick();
+</script>
 </body>
+
 </html>

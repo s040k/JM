@@ -1,8 +1,10 @@
+
+
 <div class="nav flex-column nav-pills" aria-orientation="vertical">
-    <div class="nav-item">
-        <a class="nav-link" href="/admin" id="adminPage" >Admin</a>
+    <div sec:authorize="hasRole('ROLE_ADMIN')" class="nav-item">
+        <a class="nav-link" href="/admin" id="adminPage">Admin</a>
     </div>
-    <div class="nav-item">
-        <a class="nav-link" href="/user" id="userPage" >User</a>
+    <div sec:authorize="hasAnyRole('ROLE_ADMIN', 'ROLE_USER')" class="nav-item">
+        <a class="nav-link" href="/user" id="userPage">User</a>
     </div>
 </div>

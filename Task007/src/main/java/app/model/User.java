@@ -27,25 +27,28 @@ public class User implements UserDetails {
     @Column
     private String login;
 
-    @ManyToMany(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
+    @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
     @JoinTable(name = "user_role",
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
-    private Set<Role> roles = new HashSet<>();
+    private Role role;
 
     public User() {
     }
 
-    public User(String name, String password, String login, Set<Role> roles) {
-        this.email = name;
+    public User(String email, String password, String login, Role role) {
+        this.email = email;
         this.password = password;
         this.login = login;
-        this.roles = roles;
+        this.role = role;
     }
 
     @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return getRoles();
+    public Collection<? extends GrantedAuthority> getAuthorities()
+    {
+        Set<Role>roles = new HashSet<>();
+        roles.add(role);
+        return roles;
     }
 
     public String getPassword() {
@@ -106,23 +109,22 @@ public class User implements UserDetails {
         this.login = login;
     }
 
-    public Set<Role> getRoles() {
-        return roles;
+    public Role getRole() {
+        return role;
     }
 
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
+    public void setRole(Role role) {
+        this.role = role;
     }
 
-
-    public boolean rolesIsExisName(Role role) {
+   /* public boolean rolesIsExisName(Role role) {
         for (Role x : roles) {
             if (x.getNameRole().equals(role.getNameRole())) {
                 return true;
             }
         }
         return false;
-    }
+    }*/
 
     @Override
     public String toString() {
@@ -131,7 +133,7 @@ public class User implements UserDetails {
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", login='" + login + '\'' +
-                ", roles=" + roles +
+                ", role=" + role +
                 '}';
     }
 }
