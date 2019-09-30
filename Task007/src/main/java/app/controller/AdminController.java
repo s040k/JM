@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.security.Principal;
 import java.util.*;
 
 @Controller
@@ -30,21 +31,43 @@ public class AdminController {
     private UserService userService;
 
     @Autowired
-    @Qualifier("bCryptpasswordEncoder")
-    private PasswordEncoder bCryptpasswordEncoder;
+    @Qualifier("nonCryptPasswordEncoder")
+    private PasswordEncoder passwordEncoder;
 
+
+    @GetMapping("/test")
+    public String testGet(HttpServletRequest request) {
+//        System.out.println(
+//                request.getParameter("id") + " " +
+//                        request.getParameter("email") + " " +
+//                        request.getParameter("login") + " " +
+//                        request.getParameter("password")
+//        );
+//        System.out.println("XOOXOXOXOXOX");
+        return "testVar";
+    }
 
     @GetMapping("/admin")
     public String mainUserPageGet() {
         return "redirect:/admin/users";
     }
 
+    //    @GetMapping("/admin/users")
+//    public String showAllUserGet(Model model) {
+//        List<User> users = userService.getAllUsers();
+//        model.addAttribute("simpleUsers", users);
+//
+//        return "/admin/allUsers";
+//    }
     @GetMapping("/admin/users")
-    public String showAllUserGet(Model model) {
+    public String superControllerGet(Model model, Principal principal) {
         List<User> users = userService.getAllUsers();
+        User principalUser = userService.getByLogin(principal.getName());
         model.addAttribute("simpleUsers", users);
+        model.addAttribute("principalUser", principalUser);
 
-        return "/admin/allUsers";
+        return "adminPage2";
+        //  return "/admin/allUsers";
     }
 
     @GetMapping("/admin/users/add")
@@ -60,16 +83,14 @@ public class AdminController {
         boolean result = false;
         User doAddUser = new User();
 
-        doAddUser.setName(request.getParameter("name"));
+        doAddUser.setEmail(request.getParameter("email"));
         doAddUser.setLogin(request.getParameter("login"));
-        doAddUser.setPassword(bCryptpasswordEncoder.encode(request.getParameter("password")));
+        doAddUser.setPassword(passwordEncoder.encode(request.getParameter("password")));
 
         Set<Role> roles = new HashSet<>();
-        String[] selectRoles = request.getParameterValues("selectRoles");
-        if (selectRoles != null) {
-            for (String role : selectRoles) {
-                roles.add(roleService.getRoleByName(role));
-            }
+        String role = request.getParameter("roles");
+        if (role != null && !role.isEmpty()) {
+            roles.add(roleService.getRoleByName(role));
         }
         doAddUser.setRoles(roles);
 
@@ -81,9 +102,9 @@ public class AdminController {
                 "Пользователь " + doAddUser.getLogin() + " успешно добавлен!" :
                 "Пользователь " + doAddUser.getLogin() + " не может быть добавлен в базу!";
 
-        session.setAttribute("resultMessage", resultMessage);
+        //session.setAttribute("resultMessage", resultMessage);
 
-        return "redirect:/result";
+        return "redirect:/admin/users";
     }
 
     @GetMapping("/admin/users/delete")
@@ -151,16 +172,15 @@ public class AdminController {
         User doUpdateUser = new User();
 
         doUpdateUser.setId(Long.parseLong(request.getParameter("id")));
-        doUpdateUser.setName(request.getParameter("name"));
+        doUpdateUser.setEmail(request.getParameter("email"));
         doUpdateUser.setLogin(request.getParameter("login"));
-        doUpdateUser.setPassword(bCryptpasswordEncoder.encode(request.getParameter("password")));
+        doUpdateUser.setPassword(passwordEncoder.encode(request.getParameter("password")));
 
+        System.out.println(request.getParameter("login"));
         Set<Role> roles = new HashSet<>();
-        String[] selectRoles = request.getParameterValues("selectRoles");
-        if (selectRoles != null) {
-            for (String role : selectRoles) {
-                roles.add(roleService.getRoleByName(role));
-            }
+        String role = request.getParameter("roles");
+        if (role != null && !role.isEmpty()) {
+            roles.add(roleService.getRoleByName(role));
         }
         doUpdateUser.setRoles(roles);
 
@@ -174,6 +194,6 @@ public class AdminController {
                 "Обновление пользователя " + doUpdateUser.getLogin() + " прошло неуспешно!";
         session.setAttribute("resultMessage", resultMessage);
 
-        return "redirect:/result";
+        return "redirect:/admin/users";
     }
 }

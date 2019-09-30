@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <!-- See configuration in WebMvConfig.java -->
+    <link th:href="@{/bootstrap/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen"/>
+    <link th:href="@{/css/loginPage.css}" rel="stylesheet">
+
+
+    <script th:src="@{/jquery/jquery.min.js}"></script>
+    <script th:src="@{/popper/popper.min.js}"></script>
+    <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+
+    <title>Login page</title>
+</head>
+<body class="text-center">
+
+<form class="form-signin" action="/securityLogin" method="post">
+    <h1 class="h3 mb-3 font-weight-normal">Please sing in</h1>
+    <label for="inputEmail" class="sr-only">test text login </label>
+    <input type="text" id="inputEmail" name="securityUsername" class="form-control" placeholder="Email address" required
+           autofocus/>
+
+    <label for="inputPass" class="sr-only">test text password </label>
+    <input type="password" id="inputPass" name="securityPassword" class="form-control" placeholder="Password" required/>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" name="sing_in">Sing in</button>
+</form>
+
+<!--<table cellspacing="5" border="0" align="center">-->
+<!--    <form action="/securityLogin" method="post">-->
+<!--        <tr>-->
+<!--            <td>-->
+<!--                Login:-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <input type="text" name="securityUsername"/><br>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>-->
+<!--                Password:-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <input type="password" name="securityPassword"/><br>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <input type="submit" value="Вход" width="10"/>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--    </form>-->
+<!--</table>-->
+</body>
+</html>

@@ -33,12 +33,12 @@ public class UserDaoHibernateImpl implements UserDao {
 
     public boolean isExist(User user) {
         TypedQuery<User> query = entityManager.createQuery("select u from User u where " +
-                        "name = :nameVal and " +
+                        "email = :emailVal and " +
                         "login = :loginVal and " +
                         "password = :passwordVal"
                 , User.class);
 
-        query.setParameter("nameVal", user.getName());
+        query.setParameter("emailVal", user.getEmail());
         query.setParameter("loginVal", user.getLogin());
         query.setParameter("passwordVal", user.getPassword());
         try {

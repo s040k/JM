@@ -20,6 +20,11 @@ public class UserController {
         this.userService = userService;
     }
 
+//    @GetMapping("/user")
+//    public String mainUserPageGet() {
+//        return "redirect:/user/info";
+//    }
+
     @GetMapping("/user")
     public String mainUserPageGet() {
         return "redirect:/user/info";
@@ -29,11 +34,9 @@ public class UserController {
     public String showUserGet(Model model, Principal principal) {
         User user = userService.getByLogin(principal.getName());
 
-        model.addAttribute("name", user.getName());
-        model.addAttribute("login", user.getLogin());
-        model.addAttribute("password", user.getPassword());
+        model.addAttribute("principalUser", user);
 
-        return "/user/userPage";
+        return "userPage2";
     }
 
 

@@ -43,7 +43,7 @@ public class AnonimController {
 
     @GetMapping("/login")
     public String logingPageGet() {
-        return "loging";
+        return "login";
     }
 
 

@@ -1,0 +1,46 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <!-- See configuration in WebMvConfig.java -->
+    <link th:href="@{/bootstrap/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen"/>
+    <!--    <link th:href="@{css/adminPage.css}" rel="stylesheet">-->
+
+
+    <script th:src="@{/jquery/jquery.min.js}"></script>
+    <script th:src="@{/popper/popper.min.js}"></script>
+    <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+    <link href="/css/style.css" rel="stylesheet">
+    <script th:src="@{/js/scrypt.js}"></script>
+</head>
+
+<body>
+
+<div class="header">
+    <!--    <p>Header</p>-->
+    <a th:include="navBar.html"></a>
+</div>
+
+<div class="raw flex-line">
+    <div class="col-3 nav navigation_page">
+        <!--        <p>Navigation</p>-->
+        <a th:include="sideBar.html"></a>
+    </div>
+
+    <div class="col-9 content">
+        <!--            <p>Content</p>-->
+        <!--            <p>Content</p>-->
+        <div>
+            <h2>User page</h2><br/>
+            <h6 th:utext="'Hello '+${principalUser.email}+' '+${principalUser.login}+'!'">All users</h6>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    userPageClick();
+</script>
+
+</body>
+
+</html>

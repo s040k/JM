@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User page</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <!-- See configuration in WebMvConfig.java -->
+    <link th:href="@{/bootstrap/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen"/>
+    <!--    <link th:href="@{css/adminPage.css}" rel="stylesheet">-->
+
+
+    <script th:src="@{/jquery/jquery.min.js}"></script>
+    <script th:src="@{/popper/popper.min.js}"></script>
+    <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+</head>
+<body>
+<a th:include="navBar.html"></a>
+
+<div class="row">
+    <div class="col-3">
+        <div class="nav flex-column nav-pills" aria-orientation="vertical">
+            <li class="nav-item">
+                <a class="nav-link" href="/admin">Admin</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="/user">User</a>
+            </li>
+            </ul>
+        </div>
+    </div>
+    <!--    <a th:include="sideBar.html"></a>-->
+    <div>
+        <h1>User page</h1><br/>
+        <h6 th:utext="'Hello '+${principalUser.email}+' '+${principalUser.login}+'!'">All users</h6>
+    </div>
+    <!--    <div class="panel panel-default">-->
+    <!--        <div class="header-panel">test</div>-->
+    <!--        <div class="panel-body">-->
+    <!--            <h1>User page</h1><br/>-->
+    <!--            <h6 th:utext="'Hello '+${principalUser.name}+' '+${principalUser.login}+'!'">All users</h6>-->
+    <!--        </div>-->
+    <!--    </div>-->
+
+</div>
+</body>
+</html>
