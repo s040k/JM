@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
 @Service
@@ -29,7 +30,7 @@ public class UserServiceImpl implements UserService {
         return false;
     }
 
-    public boolean updateUser(User user) {
+    public boolean updateUser(User user) throws IllegalArgumentException, EntityNotFoundException {
         if (!user.getEmail().isEmpty() & !user.getLogin().isEmpty() & !user.getPassword().isEmpty()) {
             if (userDao.getByLogin(user.getLogin()) == null || userDao.getById(user.getId()).getLogin().equals(user.getLogin())) {
                 userDao.update(user);
