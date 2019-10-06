@@ -1,12 +1,14 @@
 package app.controller.rest;
 
 import app.model.User;
+import app.service.RoleService;
 import app.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.EntityNotFoundException;
+import java.util.List;
 
 @RestController
 @RequestMapping("rest/users")
@@ -14,6 +16,16 @@ public class RestUserController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private RoleService roleService;
+
+    @GetMapping("/")
+    public ResponseEntity<List<User>> getAllUsers() {
+        List<User> usersList = userService.getAllUsers();
+
+        return usersList != null ? ResponseEntity.ok(usersList) : ResponseEntity.notFound().build();
+    }
 
     @GetMapping("{id}")
     public ResponseEntity<User> getUser(@PathVariable Long id) {
@@ -26,7 +38,7 @@ public class RestUserController {
     public ResponseEntity addUser(@RequestBody User user) {
         boolean result;
         user.setId(null);
-
+        user.setRole(roleService.getRoleByName(user.getRole().getNameRole()));
         try {
             result = userService.addUser(user);
         } catch (IllegalArgumentException | EntityNotFoundException e) {
@@ -39,7 +51,14 @@ public class RestUserController {
     @PutMapping(consumes = "application/json")
     public ResponseEntity updateUser(@RequestBody User user) {
         boolean result;
+        user.setRole(roleService.getRoleByName(user.getRole().getNameRole()));
 
+        System.out.println(user);
+        System.out.println(
+                user.getRole().getId()+" "+
+                        user.getRole().getNameRole()+" "+
+                        user.getRole().getAuthority()
+        );
         try {
             result = userService.updateUser(user);
         } catch (IllegalArgumentException | EntityNotFoundException e) {
