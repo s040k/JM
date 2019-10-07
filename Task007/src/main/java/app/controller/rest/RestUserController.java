@@ -53,12 +53,6 @@ public class RestUserController {
         boolean result;
         user.setRole(roleService.getRoleByName(user.getRole().getNameRole()));
 
-        System.out.println(user);
-        System.out.println(
-                user.getRole().getId()+" "+
-                        user.getRole().getNameRole()+" "+
-                        user.getRole().getAuthority()
-        );
         try {
             result = userService.updateUser(user);
         } catch (IllegalArgumentException | EntityNotFoundException e) {
