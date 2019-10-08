@@ -50,7 +50,7 @@ public class UserDaoHibernateImpl implements UserDao {
     }
 
     @Override
-    public void create(User user) {
+    public void create(User user) {//test
         Transaction transaction = session.beginTransaction();
         session.save(user);
         try {
